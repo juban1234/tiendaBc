@@ -26,7 +26,7 @@ namespace Principal
             string resultado = "";
             foreach (var producto in productos)
             {
-                resultado += "nombre: "+producto.nombre+" descripciones: "+producto.descripcion+"\n";
+                resultado += "nombre: "+producto.nombre + "\n" + " descripciones: "+producto.descripcion+"\n"+" stock: "+producto.cantidad + "\n";
             }
 
             lbResult.Text = resultado;

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\modelo\\conexionmyql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|solutionrelative:modelo\\conexionmyql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\principal\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|solutionrelative:principal\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\modelo\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|solutionrelative:modelo\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,18 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\principal\\agregarp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|solutionrelative:principal\\agregarp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\principal\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|solutionrelative:principal\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\principal\\eliminarp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|solutionrelative:principal\\eliminarp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\principal\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|solutionrelative:principal\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,91 +46,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EliminarP.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\EliminarP.cs",
-              "RelativeDocumentMoniker": "Principal\\EliminarP.cs",
-              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\EliminarP.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Principal\\EliminarP.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "ConexionMyql.cs",
+              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\ConexionMyql.cs",
+              "RelativeDocumentMoniker": "Modelo\\ConexionMyql.cs",
+              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\ConexionMyql.cs*",
+              "RelativeToolTip": "Modelo\\ConexionMyql.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T21:25:38.636Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Inventario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Inventario.cs",
-              "RelativeDocumentMoniker": "Principal\\Inventario.cs",
-              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Inventario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Principal\\Inventario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T21:19:42.525Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "usuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\usuarioController.cs",
-              "RelativeDocumentMoniker": "logica\\usuarioController.cs",
-              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\usuarioController.cs",
-              "RelativeToolTip": "logica\\usuarioController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAEwDQAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T19:11:19.166Z",
+              "WhenOpened": "2025-03-19T22:16:28.69Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseDatos.cs",
-              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\BaseDatos.cs",
-              "RelativeDocumentMoniker": "Modelo\\BaseDatos.cs",
-              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\BaseDatos.cs",
-              "RelativeToolTip": "Modelo\\BaseDatos.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAgwGUAAABBAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Inventario.cs",
+              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Inventario.cs",
+              "RelativeDocumentMoniker": "Principal\\Inventario.cs",
+              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Inventario.cs",
+              "RelativeToolTip": "Principal\\Inventario.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAACRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T17:53:03.565Z",
+              "WhenOpened": "2025-03-19T22:14:11.474Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "usuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\usuarioController.cs",
+              "RelativeDocumentMoniker": "logica\\usuarioController.cs",
+              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\usuarioController.cs",
+              "RelativeToolTip": "logica\\usuarioController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T22:12:08.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AgregarP.cs",
               "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\AgregarP.cs",
               "RelativeDocumentMoniker": "Principal\\AgregarP.cs",
               "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\AgregarP.cs",
               "RelativeToolTip": "Principal\\AgregarP.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowCoAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T19:33:47.783Z",
+              "WhenOpened": "2025-03-19T22:10:57.826Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "EliminarP.cs",
               "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\EliminarP.cs",
               "RelativeDocumentMoniker": "Principal\\EliminarP.cs",
               "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\EliminarP.cs",
               "RelativeToolTip": "Principal\\EliminarP.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBYAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T17:44:12.396Z",
+              "WhenOpened": "2025-03-19T22:08:46.699Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Menu.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Menu.cs",
-              "RelativeDocumentMoniker": "Principal\\Menu.cs",
-              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Menu.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Principal\\Menu.cs [Dise\u00F1o]",
+              "DocumentIndex": 2,
+              "Title": "BaseDatos.cs",
+              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\BaseDatos.cs",
+              "RelativeDocumentMoniker": "Modelo\\BaseDatos.cs",
+              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\BaseDatos.cs",
+              "RelativeToolTip": "Modelo\\BaseDatos.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAowGUAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T22:07:21.563Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-03-19T22:08:06.088Z",
+              "EditorCaption": ""
             }
           ]
         }

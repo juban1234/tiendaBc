@@ -18,9 +18,9 @@ namespace Principal
         private void btElimninar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(tbId.Text) || !int.TryParse(tbId.Text, out int idProducto))
+            if (string.IsNullOrEmpty(tbId.Text))
             {
-                resultado.Text = "Ingrese un ID válido.";
+                resultado.Text = "Ingrese un nombre que exist< en el inventario válido.";
                 resultado.ForeColor = Color.Red;
                 return;
             }

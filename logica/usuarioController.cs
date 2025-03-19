@@ -46,11 +46,11 @@ namespace logica
         }
 
 
-            public string EliminarUsuario(string id)
+            public string EliminarUsuario(string name)
             {
 
 
-            ProductoEntity producto = new ProductoEntity { id = Convert.ToInt32(id) };
+            ProductoEntity producto = new ProductoEntity { nombre = name };
             BaseDatos db = new BaseDatos();
 
             int resultado = db.EliminarUsuario(producto);

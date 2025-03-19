@@ -99,7 +99,7 @@ namespace Modelo
                 {
                     comando.CommandText = "EliminarProductoPorId";
                     comando.CommandType = System.Data.CommandType.StoredProcedure;
-                    comando.Parameters.AddWithValue("@producto_id", producto.id);
+                    comando.Parameters.AddWithValue("@producto_name", producto.nombre);
 
                     eliminado    = comando.ExecuteNonQuery();
                 }

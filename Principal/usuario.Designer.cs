@@ -77,6 +77,7 @@
             Controls.Add(textBox1);
             Name = "usuario";
             Text = "usuario";
+            Load += usuario_Load;
             ResumeLayout(false);
             PerformLayout();
         }
