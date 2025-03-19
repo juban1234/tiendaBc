@@ -28,12 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Inventario";
+            btTraerProducto = new Button();
+            lbResult = new Label();
+            btEditarP = new Button();
+            SuspendLayout();
+            // 
+            // btTraerProducto
+            // 
+            btTraerProducto.Location = new Point(108, 96);
+            btTraerProducto.Name = "btTraerProducto";
+            btTraerProducto.Size = new Size(75, 23);
+            btTraerProducto.TabIndex = 0;
+            btTraerProducto.Text = "productos";
+            btTraerProducto.UseVisualStyleBackColor = true;
+            btTraerProducto.Click += btTraerProducto_Click;
+            // 
+            // lbResult
+            // 
+            lbResult.AutoSize = true;
+            lbResult.Location = new Point(122, 203);
+            lbResult.Name = "lbResult";
+            lbResult.Size = new Size(38, 15);
+            lbResult.TabIndex = 1;
+            lbResult.Text = "label1";
+            // 
+            // btEditarP
+            // 
+            btEditarP.Location = new Point(301, 96);
+            btEditarP.Name = "btEditarP";
+            btEditarP.Size = new Size(75, 23);
+            btEditarP.TabIndex = 2;
+            btEditarP.Text = "editar producto";
+            btEditarP.UseVisualStyleBackColor = true;
+            // 
+            // Inventario
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btEditarP);
+            Controls.Add(lbResult);
+            Controls.Add(btTraerProducto);
+            Name = "Inventario";
+            Text = "Inventario";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btTraerProducto;
+        private Label lbResult;
+        private Button btEditarP;
     }
 }

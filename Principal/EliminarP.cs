@@ -7,36 +7,37 @@ namespace Principal
 {
     public partial class EliminarP : Form
     {
-        private UsuarioController controller; // Instancia del controlador
+        
 
         public EliminarP()
         {
             InitializeComponent();
-            controller = new UsuarioController(); // Inicializar el controlador
+            
         }
 
         private void btElimninar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(tbNombreP.Text) || !int.TryParse(tbNombreP.Text, out int idProducto))
+            if (string.IsNullOrEmpty(tbId.Text) || !int.TryParse(tbId.Text, out int idProducto))
             {
                 resultado.Text = "Ingrese un ID válido.";
                 resultado.ForeColor = Color.Red;
                 return;
             }
 
- 
-            int eliminado = controller.EliminarUsuario(idProducto);
+            UsuarioController controller = new UsuarioController();
 
-            // Mostrar el resultado en tbResultado
-            if (eliminado > 0)
+
+            string eliminado = controller.EliminarUsuario(tbId.Text);
+
+            resultado.Text = eliminado;
+
+            if (eliminado == "Producto Eliminado con éxito.")
             {
-                resultado.Text = "Producto eliminado con éxito.";
                 resultado.ForeColor = Color.Green;
             }
             else
             {
-                resultado.Text = "No se encontró el producto o no pudo ser eliminado.";
                 resultado.ForeColor = Color.Red;
             }
         }

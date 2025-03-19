@@ -30,7 +30,7 @@
         {
             btElimninar = new Button();
             resultado = new Label();
-            tbNombreP = new TextBox();
+            tbId = new TextBox();
             SuspendLayout();
             // 
             // btElimninar
@@ -52,19 +52,19 @@
             resultado.TabIndex = 1;
             resultado.Text = "label1";
             // 
-            // tbNombreP
+            // tbId
             // 
-            tbNombreP.Location = new Point(406, 93);
-            tbNombreP.Name = "tbNombreP";
-            tbNombreP.Size = new Size(100, 23);
-            tbNombreP.TabIndex = 2;
+            tbId.Location = new Point(406, 93);
+            tbId.Name = "tbId";
+            tbId.Size = new Size(100, 23);
+            tbId.TabIndex = 2;
             // 
             // EliminarP
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(tbNombreP);
+            Controls.Add(tbId);
             Controls.Add(resultado);
             Controls.Add(btElimninar);
             Name = "EliminarP";
@@ -77,6 +77,6 @@
 
         private Button btElimninar;
         private Label resultado;
-        private TextBox tbNombreP;
+        private TextBox tbId;
     }
 }

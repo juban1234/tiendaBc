@@ -99,9 +99,9 @@ namespace Modelo
                 {
                     comando.CommandText = "EliminarProductoPorId";
                     comando.CommandType = System.Data.CommandType.StoredProcedure;
-                    comando.Parameters.AddWithValue("@_id", producto.id);
+                    comando.Parameters.AddWithValue("@producto_id", producto.id);
 
-                    int filasAfectadas = comando.ExecuteNonQuery();
+                    eliminado    = comando.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)

@@ -46,14 +46,23 @@ namespace logica
         }
 
 
-            public int EliminarUsuario(int id)
+            public string EliminarUsuario(string id)
             {
-            ProductoEntity producto = new ProductoEntity { id = id };
+
+
+            ProductoEntity producto = new ProductoEntity { id = Convert.ToInt32(id) };
             BaseDatos db = new BaseDatos();
 
-                int resultado = db.EliminarUsuario(producto);
-                return resultado;
+            int resultado = db.EliminarUsuario(producto);
+            if (resultado > 0)
+            {
+                return "Producto Eliminado con éxito.";
             }
+            else
+            {
+                return "Error al Eliminado el producto.";
+            }
+        }
 
     }
 }
