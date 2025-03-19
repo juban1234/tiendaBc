@@ -1,31 +1,17 @@
 {
   "format": 1,
   "restore": {
-<<<<<<<< HEAD:TiendaBc/Modelo/obj/Modelo.csproj.nuget.dgspec.json
-    "C:\\Users\\SENA\\Documents\\juan grajales\\trimestre-5\\TiendaBc\\Modelo\\Modelo.csproj": {}
+    "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SENA\\Documents\\juan grajales\\trimestre-5\\TiendaBc\\Modelo\\Modelo.csproj": {
+    "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SENA\\Documents\\juan grajales\\trimestre-5\\TiendaBc\\Modelo\\Modelo.csproj",
+        "projectUniqueName": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj",
         "projectName": "Modelo",
-        "projectPath": "C:\\Users\\SENA\\Documents\\juan grajales\\trimestre-5\\TiendaBc\\Modelo\\Modelo.csproj",
+        "projectPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj",
         "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SENA\\Documents\\juan grajales\\trimestre-5\\TiendaBc\\Modelo\\obj\\",
-========
-    "C:\\Users\\SENA\\Documents\\juan grajales\\trimestre-5\\proyecto2\\PrimeraWeb\\PrimeraWeb\\PrimeraWeb.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\SENA\\Documents\\juan grajales\\trimestre-5\\proyecto2\\PrimeraWeb\\PrimeraWeb\\PrimeraWeb.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\SENA\\Documents\\juan grajales\\trimestre-5\\proyecto2\\PrimeraWeb\\PrimeraWeb\\PrimeraWeb.csproj",
-        "projectName": "PrimeraWeb",
-        "projectPath": "C:\\Users\\SENA\\Documents\\juan grajales\\trimestre-5\\proyecto2\\PrimeraWeb\\PrimeraWeb\\PrimeraWeb.csproj",
-        "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SENA\\Documents\\juan grajales\\trimestre-5\\proyecto2\\PrimeraWeb\\PrimeraWeb\\obj\\",
->>>>>>>> e6eebf877f071d9069d87c4c8dfed48bdcb50468:PrimeraWeb/PrimeraWeb/obj/PrimeraWeb.csproj.nuget.dgspec.json
+        "outputPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",

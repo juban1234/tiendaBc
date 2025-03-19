@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using Modelo;
 using Modelo.Entity;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace logica
 {
-    public class UsuarioController
+    public class UsuarioController:BaseDatos
     {
+        private BaseDatos conexion = new BaseDatos();
         // Método para ver productos
         public List<ProductoEntity> VerProductos()
         {
@@ -41,6 +44,16 @@ namespace logica
                 return "Error al guardar el producto.";
             }
         }
+
+
+            public int EliminarUsuario(int id)
+            {
+            ProductoEntity producto = new ProductoEntity { id = id };
+            BaseDatos db = new BaseDatos();
+
+                int resultado = db.EliminarUsuario(producto);
+                return resultado;
+            }
 
     }
 }

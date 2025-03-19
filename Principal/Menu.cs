@@ -9,8 +9,8 @@ namespace Principal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AgregarP agregarP = new AgregarP();
-            agregarP.ShowDialog();
+            AgregarP agregar = new AgregarP();
+            agregar.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)

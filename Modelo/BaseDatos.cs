@@ -1,6 +1,7 @@
 ﻿
 using Modelo.Entity;
 using MySql.Data.MySqlClient;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +12,14 @@ namespace Modelo
 {
     public class BaseDatos : ConexionMsql
     {
+        ConexionMsql conexion = new ConexionMsql();
         public List<ProductoEntity> TraerProductos()
         {
             List<ProductoEntity> productos = new List<ProductoEntity>();
 
-            // Usando un bloque using para asegurarse de que la conexión se cierre correctamente
             using (MySqlCommand cmd = GetConnection().CreateCommand())
             {
-                // Llamamos al procedimiento almacenado
+               
                 cmd.CommandText = "ObtenerProductos";
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -88,37 +89,28 @@ namespace Modelo
             return resultado;
         }
 
-        public int EliminarProducto(ProductoEntity producto)
+        public int EliminarUsuario(ProductoEntity producto)
         {
-            int resultado = 0; // Cambiamos a int para reflejar filas afectadas
+            int eliminado = 0;
 
             try
             {
-                using (MySqlConnection conn = GetConnection()) // Asegura que la conexión se maneja bien
+                using (MySqlCommand comando = GetConnection().CreateCommand())
                 {
-                    using (MySqlCommand cmd = conn.CreateCommand())
-                    {
-                        // Llamamos al procedimiento almacenado
-                        cmd.CommandText = "EliminarProductoPorId";
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    comando.CommandText = "EliminarProductoPorId";
+                    comando.CommandType = System.Data.CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@_id", producto.id);
 
-                        // Definir los parámetros correctamente
-                        cmd.Parameters.AddWithValue("@p_id", producto.id);
-
-                        // Ejecutamos y asignamos la cantidad de filas afectadas
-                        resultado = cmd.ExecuteNonQuery();
-                    }
+                    int filasAfectadas = comando.ExecuteNonQuery();
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error al eliminar producto: " + ex.Message);
+                Console.WriteLine("Error al eliminar usuario: " + ex.Message);
             }
 
-            return resultado; // Devolver número de filas afectadas
+            return eliminado;
         }
-
-
     }
 }
 

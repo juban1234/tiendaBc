@@ -14,7 +14,7 @@ namespace Modelo
         
         public ConexionMsql()
         {
-            cadenaConexion = "Server=localhost; Database=tiendadb; Uid=juanGrajales; Pwd=MiClaveSegura123;";
+            //cadenaConexion = "Server=localhost; Database=tiendadb; Uid=juanGrajales; Pwd=MiClaveSegura123;";
 
             cadenaConexion = "Server=localhost; Database=tiendadb; Uid=root; Pwd=;";
 
