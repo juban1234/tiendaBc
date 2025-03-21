@@ -39,5 +39,10 @@ namespace Principal
             EditarUsuario editar = new EditarUsuario();
             editar.ShowDialog();
         }
+
+        private void btBusqueda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

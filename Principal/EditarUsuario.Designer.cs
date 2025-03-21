@@ -31,10 +31,6 @@
             btEditarP = new Button();
             label1 = new Label();
             tbNombre = new TextBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
             tbCantidad = new TextBox();
             tbPrecio = new TextBox();
             tbDescripcion = new TextBox();
@@ -55,7 +51,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(157, 23);
+            label1.Location = new Point(29, 30);
             label1.Name = "label1";
             label1.Size = new Size(156, 30);
             label1.TabIndex = 39;
@@ -63,76 +59,43 @@
             // 
             // tbNombre
             // 
-            tbNombre.Location = new Point(112, 85);
+            tbNombre.Location = new Point(29, 86);
             tbNombre.Name = "tbNombre";
+            tbNombre.PlaceholderText = "nombre";
             tbNombre.Size = new Size(278, 23);
             tbNombre.TabIndex = 38;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(29, 176);
-            label5.Name = "label5";
-            label5.Size = new Size(40, 15);
-            label5.TabIndex = 37;
-            label5.Text = "precio";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(29, 132);
-            label4.Name = "label4";
-            label4.Size = new Size(68, 15);
-            label4.TabIndex = 35;
-            label4.Text = "descripcion";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(29, 222);
-            label3.Name = "label3";
-            label3.Size = new Size(53, 15);
-            label3.TabIndex = 36;
-            label3.Text = "cantidad";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(29, 85);
-            label2.Name = "label2";
-            label2.Size = new Size(49, 15);
-            label2.TabIndex = 34;
-            label2.Text = "nombre";
-            // 
             // tbCantidad
             // 
-            tbCantidad.Location = new Point(112, 219);
+            tbCantidad.Location = new Point(29, 220);
             tbCantidad.Name = "tbCantidad";
+            tbCantidad.PlaceholderText = "cantidad";
             tbCantidad.Size = new Size(278, 23);
             tbCantidad.TabIndex = 33;
             // 
             // tbPrecio
             // 
-            tbPrecio.Location = new Point(112, 176);
+            tbPrecio.Location = new Point(29, 177);
             tbPrecio.Name = "tbPrecio";
+            tbPrecio.PlaceholderText = "presio";
             tbPrecio.Size = new Size(278, 23);
             tbPrecio.TabIndex = 32;
             // 
             // tbDescripcion
             // 
-            tbDescripcion.Location = new Point(112, 132);
+            tbDescripcion.Location = new Point(29, 133);
             tbDescripcion.Name = "tbDescripcion";
+            tbDescripcion.PlaceholderText = "descripcion";
             tbDescripcion.Size = new Size(278, 23);
             tbDescripcion.TabIndex = 31;
             // 
             // Resultado1
             // 
             Resultado1.AutoSize = true;
-            Resultado1.Location = new Point(478, 108);
+            Resultado1.Location = new Point(395, 109);
             Resultado1.Name = "Resultado1";
-            Resultado1.Size = new Size(30, 15);
+            Resultado1.Size = new Size(0, 15);
             Resultado1.TabIndex = 41;
-            Resultado1.Text = "gokl";
             // 
             // EditarUsuario
             // 
@@ -143,10 +106,6 @@
             Controls.Add(btEditarP);
             Controls.Add(label1);
             Controls.Add(tbNombre);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(tbCantidad);
             Controls.Add(tbPrecio);
             Controls.Add(tbDescripcion);
@@ -161,10 +120,6 @@
         private Button btEditarP;
         private Label label1;
         private TextBox tbNombre;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
         private TextBox tbCantidad;
         private TextBox tbPrecio;
         private TextBox tbDescripcion;

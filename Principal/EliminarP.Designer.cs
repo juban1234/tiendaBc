@@ -53,9 +53,10 @@
             // 
             // tbId
             // 
-            tbId.Location = new Point(406, 93);
+            tbId.Location = new Point(291, 91);
             tbId.Name = "tbId";
-            tbId.Size = new Size(100, 23);
+            tbId.PlaceholderText = "nombre Producto";
+            tbId.Size = new Size(243, 23);
             tbId.TabIndex = 2;
             // 
             // EliminarP

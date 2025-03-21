@@ -41,5 +41,6 @@ namespace Principal
                 Resultado1.ForeColor = Color.Red;
             }
         }
+
     }
 }
