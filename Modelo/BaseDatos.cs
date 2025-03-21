@@ -116,7 +116,7 @@ namespace Modelo
         {
             using (MySqlCommand cmd = GetConnection().CreateCommand())
             {
-                cmd.CommandText = "BuscarProductos";
+                cmd.CommandText = "Buscargit add .Productos";
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@p_nombre", nombre); // Parámetro para la consulta
 
