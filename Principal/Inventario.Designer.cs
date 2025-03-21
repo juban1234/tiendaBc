@@ -34,16 +34,6 @@
             lbBusqueda = new Label();
             textBox1 = new TextBox();
             btBusqueda = new Button();
-            btGuardar = new Button();
-            tbNombre = new TextBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            tbCantidad = new TextBox();
-            tbPrecio = new TextBox();
-            tbDescripcion = new TextBox();
-            Resultado1 = new Label();
             SuspendLayout();
             // 
             // btTraerProducto
@@ -59,11 +49,10 @@
             // lbResult
             // 
             lbResult.AutoSize = true;
-            lbResult.Location = new Point(120, 364);
+            lbResult.Location = new Point(299, 151);
             lbResult.Name = "lbResult";
-            lbResult.Size = new Size(17, 15);
+            lbResult.Size = new Size(0, 15);
             lbResult.TabIndex = 1;
-            lbResult.Text = "gl";
             // 
             // btEditarP
             // 
@@ -100,103 +89,11 @@
             btBusqueda.Text = "busqueda";
             btBusqueda.UseVisualStyleBackColor = true;
             // 
-            // btGuardar
-            // 
-            btGuardar.Location = new Point(643, 364);
-            btGuardar.Name = "btGuardar";
-            btGuardar.Size = new Size(131, 58);
-            btGuardar.TabIndex = 6;
-            btGuardar.Text = "Guardar  ";
-            btGuardar.UseVisualStyleBackColor = true;
-            // 
-            // tbNombre
-            // 
-            tbNombre.Location = new Point(311, 148);
-            tbNombre.Name = "tbNombre";
-            tbNombre.Size = new Size(278, 23);
-            tbNombre.TabIndex = 20;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(618, 239);
-            label5.Name = "label5";
-            label5.Size = new Size(40, 15);
-            label5.TabIndex = 19;
-            label5.Text = "precio";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(608, 198);
-            label4.Name = "label4";
-            label4.Size = new Size(68, 15);
-            label4.TabIndex = 17;
-            label4.Text = "descripcion";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(608, 280);
-            label3.Name = "label3";
-            label3.Size = new Size(53, 15);
-            label3.TabIndex = 18;
-            label3.Text = "cantidad";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(608, 151);
-            label2.Name = "label2";
-            label2.Size = new Size(49, 15);
-            label2.TabIndex = 16;
-            label2.Text = "nombre";
-            // 
-            // tbCantidad
-            // 
-            tbCantidad.Location = new Point(311, 277);
-            tbCantidad.Name = "tbCantidad";
-            tbCantidad.Size = new Size(278, 23);
-            tbCantidad.TabIndex = 15;
-            // 
-            // tbPrecio
-            // 
-            tbPrecio.Location = new Point(311, 236);
-            tbPrecio.Name = "tbPrecio";
-            tbPrecio.Size = new Size(278, 23);
-            tbPrecio.TabIndex = 14;
-            // 
-            // tbDescripcion
-            // 
-            tbDescripcion.Location = new Point(311, 195);
-            tbDescripcion.Name = "tbDescripcion";
-            tbDescripcion.Size = new Size(278, 23);
-            tbDescripcion.TabIndex = 13;
-            // 
-            // Resultado1
-            // 
-            Resultado1.AutoSize = true;
-            Resultado1.Location = new Point(281, 342);
-            Resultado1.Name = "Resultado1";
-            Resultado1.Size = new Size(30, 15);
-            Resultado1.TabIndex = 21;
-            Resultado1.Text = "gokl";
-            // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(Resultado1);
-            Controls.Add(tbNombre);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(tbCantidad);
-            Controls.Add(tbPrecio);
-            Controls.Add(tbDescripcion);
-            Controls.Add(btGuardar);
             Controls.Add(btBusqueda);
             Controls.Add(textBox1);
             Controls.Add(lbBusqueda);
@@ -217,15 +114,5 @@
         private Label lbBusqueda;
         private TextBox textBox1;
         private Button btBusqueda;
-        private Button btGuardar;
-        private TextBox tbNombre;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private TextBox tbCantidad;
-        private TextBox tbPrecio;
-        private TextBox tbDescripcion;
-        private Label Resultado1;
     }
 }

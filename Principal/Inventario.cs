@@ -36,28 +36,8 @@ namespace Principal
 
         private void btEditarP_Click(object sender, EventArgs e)
         {
-
-
-            UsuarioController controller = new UsuarioController();
-
-            string resultado = controller.EditarProducto(
-                tbNombre.Text,
-                tbDescripcion.Text,
-                tbPrecio.Text,
-                tbCantidad.Text
-            );
-
-            Resultado1.Text = resultado;
-
-            if (resultado == "Producto guardado con éxito.")
-            {
-                Resultado1.ForeColor = Color.Green;
-            }
-            else
-            {
-                Resultado1.ForeColor = Color.Red;
-            }
-
+            EditarUsuario editar = new EditarUsuario();
+            editar.ShowDialog();
         }
     }
 }
