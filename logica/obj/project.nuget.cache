@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h3nVQ+xfgb0=",
+  "dgSpecHash": "vN7fQyIQYVU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\logica.csproj",
+  "projectFilePath": "C:\\Users\\SENA\\Documents\\tiendaBc\\logica\\logica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SENA\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\SENA\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",
