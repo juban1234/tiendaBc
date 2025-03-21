@@ -32,6 +32,7 @@ namespace Principal
 
             resultado.Text = eliminado;
 
+
             if (eliminado == "Producto Eliminado con éxito.")
             {
                 resultado.ForeColor = Color.Green;

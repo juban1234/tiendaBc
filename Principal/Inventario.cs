@@ -26,10 +26,17 @@ namespace Principal
             string resultado = "";
             foreach (var producto in productos)
             {
-                resultado += "nombre: "+producto.nombre + "\n" + " descripciones: "+producto.descripcion+"\n"+" stock: "+producto.cantidad + "\n";
+                resultado += "nombre: " + producto.nombre + "\n" + " descripciones: " + producto.descripcion + "\n" + " stock: " + producto.cantidad + "\n\n";
             }
 
             lbResult.Text = resultado;
+
+
+        }
+
+        private void btEditarP_Click(object sender, EventArgs e)
+        {
+            UsuarioController us = new UsuarioController();
 
 
         }

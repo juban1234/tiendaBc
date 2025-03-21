@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\modelo\\conexionmyql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|solutionrelative:modelo\\conexionmyql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\modelo\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|solutionrelative:modelo\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A613C92B-19E2-4549-972A-60C8A072A621}|logica\\logica.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\logica\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A613C92B-19E2-4549-972A-60C8A072A621}|logica\\logica.csproj|solutionrelative:logica\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\principal\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|solutionrelative:principal\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\principal\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|solutionrelative:principal\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\modelo\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|solutionrelative:modelo\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\principal\\eliminarp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|solutionrelative:principal\\eliminarp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\principal\\eliminarp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|solutionrelative:principal\\eliminarp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\modelo\\conexionmyql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0A690D-3D8F-4073-9C4E-4E9D75CFAAB8}|Modelo\\Modelo.csproj|solutionrelative:modelo\\conexionmyql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A613C92B-19E2-4549-972A-60C8A072A621}|logica\\logica.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\logica\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A613C92B-19E2-4549-972A-60C8A072A621}|logica\\logica.csproj|solutionrelative:logica\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8AB37185-3A3D-4272-ADE6-CE965CB838DF}|Principal\\Principal.csproj|c:\\users\\sena\\documents\\juan grajales\\tiendabc\\principal\\agregarp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,45 +54,83 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EliminarP.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\EliminarP.cs",
+              "RelativeDocumentMoniker": "Principal\\EliminarP.cs",
+              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\EliminarP.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\EliminarP.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T19:01:30.449Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EliminarP.cs",
+              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\EliminarP.cs",
+              "RelativeDocumentMoniker": "Principal\\EliminarP.cs",
+              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\EliminarP.cs",
+              "RelativeToolTip": "Principal\\EliminarP.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T22:08:46.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Inventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Inventario.cs",
+              "RelativeDocumentMoniker": "Principal\\Inventario.cs",
+              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Inventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\Inventario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T18:51:40.834Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ConexionMyql.cs",
               "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\ConexionMyql.cs",
               "RelativeDocumentMoniker": "Modelo\\ConexionMyql.cs",
               "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\ConexionMyql.cs",
               "RelativeToolTip": "Modelo\\ConexionMyql.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowBIAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T22:16:28.69Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Inventario.cs",
               "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Inventario.cs",
               "RelativeDocumentMoniker": "Principal\\Inventario.cs",
               "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Inventario.cs",
               "RelativeToolTip": "Principal\\Inventario.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAACRAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T22:14:11.474Z"
+              "WhenOpened": "2025-03-19T22:14:11.474Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "usuarioController.cs",
               "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\usuarioController.cs",
               "RelativeDocumentMoniker": "logica\\usuarioController.cs",
               "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\usuarioController.cs",
               "RelativeToolTip": "logica\\usuarioController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowDcAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T22:12:08.61Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AgregarP.cs",
               "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\AgregarP.cs",
               "RelativeDocumentMoniker": "Principal\\AgregarP.cs",
@@ -96,25 +142,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EliminarP.cs",
-              "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\EliminarP.cs",
-              "RelativeDocumentMoniker": "Principal\\EliminarP.cs",
-              "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\EliminarP.cs",
-              "RelativeToolTip": "Principal\\EliminarP.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBYAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T22:08:46.699Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BaseDatos.cs",
               "DocumentMoniker": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\BaseDatos.cs",
               "RelativeDocumentMoniker": "Modelo\\BaseDatos.cs",
               "ToolTip": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\BaseDatos.cs",
               "RelativeToolTip": "Modelo\\BaseDatos.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAowGUAAABVAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAiwIMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T22:08:06.088Z",
               "EditorCaption": ""

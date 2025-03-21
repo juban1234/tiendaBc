@@ -31,11 +31,12 @@
             btTraerProducto = new Button();
             lbResult = new Label();
             btEditarP = new Button();
+            lbBusqueda = new Label();
             SuspendLayout();
             // 
             // btTraerProducto
             // 
-            btTraerProducto.Location = new Point(108, 96);
+            btTraerProducto.Location = new Point(32, 270);
             btTraerProducto.Name = "btTraerProducto";
             btTraerProducto.Size = new Size(75, 23);
             btTraerProducto.TabIndex = 0;
@@ -46,26 +47,36 @@
             // lbResult
             // 
             lbResult.AutoSize = true;
-            lbResult.Location = new Point(122, 203);
+            lbResult.Location = new Point(352, 226);
             lbResult.Name = "lbResult";
-            lbResult.Size = new Size(38, 15);
+            lbResult.Size = new Size(0, 15);
             lbResult.TabIndex = 1;
-            lbResult.Text = "label1";
             // 
             // btEditarP
             // 
-            btEditarP.Location = new Point(301, 96);
+            btEditarP.Location = new Point(32, 226);
             btEditarP.Name = "btEditarP";
             btEditarP.Size = new Size(75, 23);
             btEditarP.TabIndex = 2;
             btEditarP.Text = "editar producto";
             btEditarP.UseVisualStyleBackColor = true;
+            btEditarP.Click += btEditarP_Click;
+            // 
+            // lbBusqueda
+            // 
+            lbBusqueda.AutoSize = true;
+            lbBusqueda.Location = new Point(139, 71);
+            lbBusqueda.Name = "lbBusqueda";
+            lbBusqueda.Size = new Size(59, 15);
+            lbBusqueda.TabIndex = 3;
+            lbBusqueda.Text = "Busqueda";
             // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbBusqueda);
             Controls.Add(btEditarP);
             Controls.Add(lbResult);
             Controls.Add(btTraerProducto);
@@ -80,5 +91,6 @@
         private Button btTraerProducto;
         private Label lbResult;
         private Button btEditarP;
+        private Label lbBusqueda;
     }
 }

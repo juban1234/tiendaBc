@@ -16,7 +16,7 @@ namespace Modelo
         {
             //cadenaConexion = "Server=localhost; Database=tiendadb; Uid=juanGrajales; Pwd=MiClaveSegura123;";
 
-            cadenaConexion = "Server=localhost;Database=tiendadb;User ID=juanGrajales;Password=MiClaveSegura123;";
+            cadenaConexion = "Server=localhost;Database=tiendadb;User ID=juanGrajales;Password=MiClaveSegura123";
 
             connection = new MySqlConnection(cadenaConexion);
         }

@@ -111,6 +111,29 @@ namespace Modelo
 
             return eliminado;
         }
+
+        public int BuscarProducto(ProductoEntity producto)
+        {
+            int eliminado = 0;
+            try
+            {
+                using (MySqlCommand comando = GetConnection().CreateCommand())
+                {
+                    comando.CommandText = "BuscarProductos";
+                    comando.CommandType = System.Data.CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@p_nombre", producto.nombre);
+
+                    eliminado = comando.ExecuteNonQuery();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error al buscar el producto: " + ex.Message);
+            }
+
+            return eliminado;
+        }
     }
 }
 
