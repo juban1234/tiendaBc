@@ -1,0 +1,23 @@
+# Evita archivos de compilación
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Evita archivos de Visual Studio
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Evita archivos de configuración local
+appsettings.Development.json
+*.config
+*.log
+
+# Evita archivos de base de datos local
+*.mdf
+*.ldf

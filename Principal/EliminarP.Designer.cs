@@ -48,9 +48,8 @@
             resultado.AutoSize = true;
             resultado.Location = new Point(125, 200);
             resultado.Name = "resultado";
-            resultado.Size = new Size(38, 15);
+            resultado.Size = new Size(0, 15);
             resultado.TabIndex = 1;
-            resultado.Text = "label1";
             // 
             // tbId
             // 

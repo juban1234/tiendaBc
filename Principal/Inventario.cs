@@ -37,7 +37,18 @@ namespace Principal
         private void btEditarP_Click(object sender, EventArgs e)
         {
             UsuarioController us = new UsuarioController();
+            string nombre = btBusqueda.Text;
 
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btBusqueda_Click(object sender, EventArgs e)
+        {
 
         }
     }
