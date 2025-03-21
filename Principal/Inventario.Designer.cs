@@ -32,22 +32,25 @@
             lbResult = new Label();
             btEditarP = new Button();
             lbBusqueda = new Label();
+            textBox1 = new TextBox();
+            btBusqueda = new Button();
+            btGuardar = new Button();
             SuspendLayout();
             // 
             // btTraerProducto
             // 
-            btTraerProducto.Location = new Point(32, 270);
+            btTraerProducto.Location = new Point(32, 142);
             btTraerProducto.Name = "btTraerProducto";
-            btTraerProducto.Size = new Size(75, 23);
+            btTraerProducto.Size = new Size(131, 58);
             btTraerProducto.TabIndex = 0;
-            btTraerProducto.Text = "productos";
+            btTraerProducto.Text = "inventario de  productos ";
             btTraerProducto.UseVisualStyleBackColor = true;
             btTraerProducto.Click += btTraerProducto_Click;
             // 
             // lbResult
             // 
             lbResult.AutoSize = true;
-            lbResult.Location = new Point(352, 226);
+            lbResult.Location = new Point(344, 151);
             lbResult.Name = "lbResult";
             lbResult.Size = new Size(0, 15);
             lbResult.TabIndex = 1;
@@ -56,26 +59,54 @@
             // 
             btEditarP.Location = new Point(32, 226);
             btEditarP.Name = "btEditarP";
-            btEditarP.Size = new Size(75, 23);
+            btEditarP.Size = new Size(131, 61);
             btEditarP.TabIndex = 2;
-            btEditarP.Text = "editar producto";
+            btEditarP.Text = "editar productos";
             btEditarP.UseVisualStyleBackColor = true;
             btEditarP.Click += btEditarP_Click;
             // 
             // lbBusqueda
             // 
             lbBusqueda.AutoSize = true;
-            lbBusqueda.Location = new Point(139, 71);
+            lbBusqueda.Location = new Point(70, 66);
             lbBusqueda.Name = "lbBusqueda";
-            lbBusqueda.Size = new Size(59, 15);
+            lbBusqueda.Size = new Size(116, 15);
             lbBusqueda.TabIndex = 3;
-            lbBusqueda.Text = "Busqueda";
+            lbBusqueda.Text = "Busqueda productos";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(263, 65);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(383, 23);
+            textBox1.TabIndex = 4;
+            // 
+            // btBusqueda
+            // 
+            btBusqueda.Location = new Point(679, 67);
+            btBusqueda.Name = "btBusqueda";
+            btBusqueda.Size = new Size(75, 23);
+            btBusqueda.TabIndex = 5;
+            btBusqueda.Text = "busqueda";
+            btBusqueda.UseVisualStyleBackColor = true;
+            // 
+            // btGuardar
+            // 
+            btGuardar.Location = new Point(643, 364);
+            btGuardar.Name = "btGuardar";
+            btGuardar.Size = new Size(131, 58);
+            btGuardar.TabIndex = 6;
+            btGuardar.Text = "Guardar  ";
+            btGuardar.UseVisualStyleBackColor = true;
             // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btGuardar);
+            Controls.Add(btBusqueda);
+            Controls.Add(textBox1);
             Controls.Add(lbBusqueda);
             Controls.Add(btEditarP);
             Controls.Add(lbResult);
@@ -92,5 +123,8 @@
         private Label lbResult;
         private Button btEditarP;
         private Label lbBusqueda;
+        private TextBox textBox1;
+        private Button btBusqueda;
+        private Button btGuardar;
     }
 }

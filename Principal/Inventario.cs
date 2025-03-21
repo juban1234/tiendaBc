@@ -37,6 +37,7 @@ namespace Principal
         private void btEditarP_Click(object sender, EventArgs e)
         {
             UsuarioController us = new UsuarioController();
+            string nombre = btBusqueda.Text;
 
 
         }
