@@ -112,30 +112,27 @@ namespace Modelo
             return eliminado;
         }
 
-        public int BuscarProducto(ProductoEntity producto)
+        public int BuscarPRoducto(ProductoEntity producto)
         {
-            int buscar = 0;
+            int Busqueda = 0;
             try
             {
-                using (MySqlCommand comando = GetConnection().CreateCommand())
-                {
-                    comando.CommandText = "BuscarProductos";
-                    comando.CommandType = System.Data.CommandType.StoredProcedure;
-                    comando.Parameters.AddWithValue("@p_nombre", producto.nombre);
-
-                    buscar = comando.ExecuteNonQuery();
-                }
-
+                using(MySqlCommand comando = GetConnection().CreateCommand())
+                    {
+                        comando.CommandText = "BuscarProducto";
+                        comando.CommandType = System.Data.CommandType.StoredProcedure;
+                        comando.Parameters.AddWithValue("@p_nombre", producto.nombre);
+                        Busqueda = comando.ExecuteNonQuery();
+                    }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al buscar el producto: " + ex.Message);
             }
 
-            return buscar;
+            return Busqueda;    
         }
-
-        public int EditarProducto(ProductoEntity producto)
+            public int EditarProducto(ProductoEntity producto)
         {
             int editado = 0;
 
