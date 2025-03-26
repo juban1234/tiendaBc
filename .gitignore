@@ -1,6 +1,10 @@
 # Evita archivos de compilación
-bin/
-obj/
+Principal/bin/
+Principal/obj/
+logica/bin/
+logica/obj/
+Modelo/bin/
+Modelo/obj
 *.exe
 *.dll
 *.pdb
