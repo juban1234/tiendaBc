@@ -17,32 +17,38 @@ namespace Modelo
         {
             List<ProductoEntity> productos = new List<ProductoEntity>();
 
-            using (MySqlCommand cmd = GetConnection().CreateCommand())
+            try
             {
-
-                cmd.CommandText = "ObtenerProductos";
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-                using (MySqlDataReader dr = cmd.ExecuteReader())
+                using (MySqlCommand cmd = GetConnection().CreateCommand())
                 {
-                    while (dr.Read())
+                    cmd.CommandText = "ObtenerProductos";
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    using (MySqlDataReader dr = cmd.ExecuteReader())
                     {
-                        ProductoEntity productoActual = new ProductoEntity();
-                        productoActual.id = dr.GetInt32(0);         // id del producto
-                        productoActual.nombre = dr.GetString(1);    // nombre del producto
-                        productoActual.descripcion = dr.GetString(2);  // descripción
-                        productoActual.precio = dr.GetDouble(3);    // precio
-                        productoActual.cantidad = dr.GetInt32(4);   // cantidad
-
-                        // Verificar si hay una imagen y cargarla
-                        if (!dr.IsDBNull(5))
+                        while (dr.Read())
                         {
-                            productoActual.imagen = (byte[])dr.GetValue(5);  // Convertir la imagen
-                        }
+                            ProductoEntity productoActual = new ProductoEntity();
+                            productoActual.id = dr.GetInt32(0); // id del producto
+                            productoActual.nombre = dr.GetString(1); // nombre del producto
+                            productoActual.descripcion = dr.GetString(2); // descripción
+                            productoActual.precio = dr.GetDouble(3); // precio
+                            productoActual.cantidad = dr.GetInt32(4); // cantidad
 
-                        productos.Add(productoActual);
+                            if (!dr.IsDBNull(5))
+                            {
+                                productoActual.imagen = (byte[])dr.GetValue(5); // imagen
+                            }
+
+                            productos.Add(productoActual);
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                // Manejar el error adecuadamente (ejemplo, loguear el error)
+                Console.WriteLine($"Error: {ex.Message}");
             }
             return productos;
 
