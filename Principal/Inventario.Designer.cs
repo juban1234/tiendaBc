@@ -27,29 +27,29 @@
         /// the contents of this method with the code editor.
         /// </summary>
         /// 
-        private Panel panelContainer;
+        private Panel PanelContainer;
         private void InitializeComponent()
         {
-            btTraerProducto = new Button();
+            BtTraerProducto = new Button();
             lbResult = new Label();
-            btEditarP = new Button();
+            BtEditarP = new Button();
             textBox1 = new TextBox();
-            btBusqueda = new Button();
-            panelContainer = new Panel();
-            btAgregarProve = new Button();
-            btEliminarP = new Button();
-            btAgregarP = new Button();
+            BtBusqueda = new Button();
+            PanelContainer = new Panel();
+            BtAgregarProve = new Button();
+            BtEliminarP = new Button();
+            BtAgregarP = new Button();
             SuspendLayout();
             // 
-            // btTraerProducto
+            // BtTraerProducto
             // 
-            btTraerProducto.Location = new Point(26, 271);
-            btTraerProducto.Name = "btTraerProducto";
-            btTraerProducto.Size = new Size(131, 38);
-            btTraerProducto.TabIndex = 0;
-            btTraerProducto.Text = "inventario de  productos ";
-            btTraerProducto.UseVisualStyleBackColor = true;
-            btTraerProducto.Click += btTraerProducto_Click;
+            BtTraerProducto.Location = new Point(26, 271);
+            BtTraerProducto.Name = "BtTraerProducto";
+            BtTraerProducto.Size = new Size(131, 38);
+            BtTraerProducto.TabIndex = 0;
+            BtTraerProducto.Text = "inventario de  productos ";
+            BtTraerProducto.UseVisualStyleBackColor = true;
+            BtTraerProducto.Click += BtTraerProducto_Click;
             // 
             // lbResult
             // 
@@ -59,15 +59,15 @@
             lbResult.Size = new Size(0, 15);
             lbResult.TabIndex = 1;
             // 
-            // btEditarP
+            // BtEditarP
             // 
-            btEditarP.Location = new Point(26, 171);
-            btEditarP.Name = "btEditarP";
-            btEditarP.Size = new Size(131, 32);
-            btEditarP.TabIndex = 2;
-            btEditarP.Text = "editar producto";
-            btEditarP.UseVisualStyleBackColor = true;
-            btEditarP.Click += btEditarP_Click;
+            BtEditarP.Location = new Point(26, 171);
+            BtEditarP.Name = "BtEditarP";
+            BtEditarP.Size = new Size(131, 32);
+            BtEditarP.TabIndex = 2;
+            BtEditarP.Text = "editar producto";
+            BtEditarP.UseVisualStyleBackColor = true;
+            BtEditarP.Click += BtEditarP_Click;
             // 
             // textBox1
             // 
@@ -77,69 +77,69 @@
             textBox1.Size = new Size(383, 23);
             textBox1.TabIndex = 4;
             // 
-            // btBusqueda
+            // BtBusqueda
             // 
-            btBusqueda.Location = new Point(449, 40);
-            btBusqueda.Name = "btBusqueda";
-            btBusqueda.Size = new Size(75, 23);
-            btBusqueda.TabIndex = 5;
-            btBusqueda.Text = "busqueda";
-            btBusqueda.UseVisualStyleBackColor = true;
-            btBusqueda.Click += btBusqueda_Click;
+            BtBusqueda.Location = new Point(449, 40);
+            BtBusqueda.Name = "BtBusqueda";
+            BtBusqueda.Size = new Size(75, 23);
+            BtBusqueda.TabIndex = 5;
+            BtBusqueda.Text = "busqueda";
+            BtBusqueda.UseVisualStyleBackColor = true;
+            BtBusqueda.Click += BtBusqueda_Click;
             // 
-            // panelContainer
+            // PanelContainer
             // 
-            panelContainer.AutoScroll = true;
-            panelContainer.BackColor = Color.White;
-            panelContainer.Location = new Point(266, 122);
-            panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(454, 294);
-            panelContainer.TabIndex = 6;
+            PanelContainer.AutoScroll = true;
+            PanelContainer.BackColor = Color.White;
+            PanelContainer.Location = new Point(266, 122);
+            PanelContainer.Name = "PanelContainer";
+            PanelContainer.Size = new Size(454, 294);
+            PanelContainer.TabIndex = 6;
             // 
-            // btAgregarProve
+            // BtAgregarProve
             // 
-            btAgregarProve.Location = new Point(26, 333);
-            btAgregarProve.Name = "btAgregarProve";
-            btAgregarProve.Size = new Size(131, 35);
-            btAgregarProve.TabIndex = 7;
-            btAgregarProve.Text = "agregar proveedores";
-            btAgregarProve.UseVisualStyleBackColor = true;
-            btAgregarProve.Click += btAgregarProve_Click;
+            BtAgregarProve.Location = new Point(26, 333);
+            BtAgregarProve.Name = "BtAgregarProve";
+            BtAgregarProve.Size = new Size(131, 35);
+            BtAgregarProve.TabIndex = 7;
+            BtAgregarProve.Text = "agregar proveedores";
+            BtAgregarProve.UseVisualStyleBackColor = true;
+            BtAgregarProve.Click += BtAgregarProve_Click;
             // 
-            // btEliminarP
+            // BtEliminarP
             // 
-            btEliminarP.Location = new Point(26, 221);
-            btEliminarP.Name = "btEliminarP";
-            btEliminarP.Size = new Size(131, 32);
-            btEliminarP.TabIndex = 8;
-            btEliminarP.Text = "Elimiar productos";
-            btEliminarP.UseVisualStyleBackColor = true;
-            btEliminarP.Click += btEliminarP_Click;
+            BtEliminarP.Location = new Point(26, 221);
+            BtEliminarP.Name = "BtEliminarP";
+            BtEliminarP.Size = new Size(131, 32);
+            BtEliminarP.TabIndex = 8;
+            BtEliminarP.Text = "Elimiar productos";
+            BtEliminarP.UseVisualStyleBackColor = true;
+            BtEliminarP.Click += BtEliminarP_Click;
             // 
-            // btAgregarP
+            // BtAgregarP
             // 
-            btAgregarP.Location = new Point(26, 122);
-            btAgregarP.Name = "btAgregarP";
-            btAgregarP.Size = new Size(131, 32);
-            btAgregarP.TabIndex = 9;
-            btAgregarP.Text = "agregar producto";
-            btAgregarP.UseVisualStyleBackColor = true;
-            btAgregarP.Click += btAgregarP_Click;
+            BtAgregarP.Location = new Point(26, 122);
+            BtAgregarP.Name = "BtAgregarP";
+            BtAgregarP.Size = new Size(131, 32);
+            BtAgregarP.TabIndex = 9;
+            BtAgregarP.Text = "agregar producto";
+            BtAgregarP.UseVisualStyleBackColor = true;
+            BtAgregarP.Click += BtAgregarP_Click;
             // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btAgregarP);
-            Controls.Add(btEliminarP);
-            Controls.Add(btAgregarProve);
-            Controls.Add(btBusqueda);
+            Controls.Add(BtAgregarP);
+            Controls.Add(BtEliminarP);
+            Controls.Add(BtAgregarProve);
+            Controls.Add(BtBusqueda);
             Controls.Add(textBox1);
-            Controls.Add(btEditarP);
+            Controls.Add(BtEditarP);
             Controls.Add(lbResult);
-            Controls.Add(btTraerProducto);
-            Controls.Add(panelContainer);
+            Controls.Add(BtTraerProducto);
+            Controls.Add(PanelContainer);
             Name = "Inventario";
             Text = "Inventario";
             ResumeLayout(false);
@@ -148,13 +148,13 @@
 
         #endregion
 
-        private Button btTraerProducto;
+        private Button BtTraerProducto;
         private Label lbResult;
-        private Button btEditarP;
+        private Button BtEditarP;
         private TextBox textBox1;
-        private Button btBusqueda;
-        private Button btAgregarProve;
-        private Button btEliminarP;
-        private Button btAgregarP;
+        private Button BtBusqueda;
+        private Button BtAgregarProve;
+        private Button BtEliminarP;
+        private Button BtAgregarP;
     }
 }
