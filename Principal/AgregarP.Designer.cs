@@ -31,11 +31,11 @@
             label1 = new Label();
             btAgregar = new Button();
             tbResultado = new Label();
-            tbImagen = new TextBox();
             tbNombre = new TextBox();
             tbCantidad = new TextBox();
             tbPrecio = new TextBox();
             tbDescripcion = new TextBox();
+            tbImagen = new TextBox();
             tbProovedor = new TextBox();
             SuspendLayout();
             // 
@@ -66,14 +66,6 @@
             tbResultado.Name = "tbResultado";
             tbResultado.Size = new Size(0, 15);
             tbResultado.TabIndex = 7;
-            // 
-            // tbImagen
-            // 
-            tbImagen.Location = new Point(39, 268);
-            tbImagen.Name = "tbImagen";
-            tbImagen.PlaceholderText = "imagen";
-            tbImagen.Size = new Size(278, 23);
-            tbImagen.TabIndex = 4;
             // 
             // tbNombre
             // 
@@ -107,6 +99,14 @@
             tbDescripcion.Size = new Size(278, 23);
             tbDescripcion.TabIndex = 39;
             // 
+            // tbImagen
+            // 
+            tbImagen.Location = new Point(39, 268);
+            tbImagen.Name = "tbImagen";
+            tbImagen.PlaceholderText = "imagen";
+            tbImagen.Size = new Size(278, 23);
+            tbImagen.TabIndex = 4;
+            // 
             // tbProovedor
             // 
             tbProovedor.Location = new Point(39, 312);
@@ -139,11 +139,11 @@
         private Label label1;
         private Button btAgregar;
         private Label tbResultado;
-        private TextBox tbImagen;
         private TextBox tbNombre;
         private TextBox tbCantidad;
         private TextBox tbPrecio;
         private TextBox tbDescripcion;
+        private TextBox tbImagen;
         private TextBox tbProovedor;
     }
 }

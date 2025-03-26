@@ -18,15 +18,39 @@ namespace Principal
             InitializeComponent();
         }
 
+
+        private void btBusqueda_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btAgregarP_Click(object sender, EventArgs e)
+        {
+            AgregarP agregarP = new AgregarP();
+            agregarP.ShowDialog();
+        }
+
+        private void btEditarP_Click(object sender, EventArgs e)
+        {
+            EditarUsuario editar = new EditarUsuario();
+            editar.ShowDialog();
+        }
+
+        private void btEliminarP_Click(object sender, EventArgs e)
+        {
+            EliminarP eliminarP = new EliminarP();
+            eliminarP.ShowDialog();
+        }
+
         private void btTraerProducto_Click(object sender, EventArgs e)
         {
             UsuarioController us = new UsuarioController();
             var productos = us.TraerProductos();
 
-            // Limpiar el panel antes de agregar nuevos elementos
+
             panelContainer.Controls.Clear();
 
-            int yOffset = 10; // Posición inicial Y dentro del Panel
+            int yOffset = 10;
 
             foreach (var producto in productos)
             {
@@ -37,20 +61,16 @@ namespace Principal
 
                 panelContainer.Controls.Add(lblProducto);
 
-                yOffset += 50; // Espaciado entre elementos
+                yOffset += 50;
             }
         }
 
-
-        private void btEditarP_Click(object sender, EventArgs e)
+        private void btAgregarProve_Click(object sender, EventArgs e)
         {
-            EditarUsuario editar = new EditarUsuario();
-            editar.ShowDialog();
+            AgregarProve agregarProve = new AgregarProve(); 
+            agregarProve.ShowDialog();
         }
 
-        private void btBusqueda_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
