@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj": {}
+    "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\Modelo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj": {
+    "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\Modelo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj",
+        "projectUniqueName": "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\Modelo.csproj",
         "projectName": "Modelo",
-        "projectPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj",
+        "projectPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\Modelo.csproj",
         "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\obj\\",
+        "outputPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
