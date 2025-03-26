@@ -119,7 +119,7 @@ namespace Modelo
             return eliminado;
         }
 
-        public int BuscarPRoducto(ProductoEntity producto)
+        public int BuscarProducto(ProductoEntity producto)
         {
             int Busqueda = 0;
             try
@@ -139,10 +139,9 @@ namespace Modelo
 
             return Busqueda;    
         }
-            public int EditarProducto(ProductoEntity producto)
+        public int EditarProducto(ProductoEntity producto)
         {
             int editado = 0;
-
             try
             {
                 using (MySqlCommand comando = GetConnection().CreateCommand())
@@ -161,7 +160,6 @@ namespace Modelo
             {
                 Console.WriteLine("Error al Editar el producto: " + ex.Message);
             }
-
             return editado;
         }
     }

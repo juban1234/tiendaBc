@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using Modelo;
 using Modelo.Entity;
 using static System.Net.Mime.MediaTypeNames;
@@ -18,8 +19,6 @@ namespace logica
 
             return productos;
         }
-
-
         public string GuardarProducto(string nombre, string descripcion, string precio, string cantidad, string imagen,string id_provedor)
         {
             // Crear un objeto ProductoEntity
@@ -60,7 +59,6 @@ namespace logica
                 return "Error al Eliminado el producto.";
             }
         }
-
         public string EditarProducto(string nombre, string descripcion, string precio, string cantidad)
         {
             ProductoEntity producto = new ProductoEntity
@@ -75,6 +73,25 @@ namespace logica
             int resultado = db.EditarProducto(producto);
 
             if (resultado > 0)
+            {
+                return "Producto editado con éxito.";
+            }
+            else
+            {
+                return "Error al editado el producto.";
+            }
+        }
+
+        public string BuscarProducto(string nombre)
+        {
+            
+            BaseDatos db = new BaseDatos();
+            ProductoEntity producto = new ProductoEntity(nombre = nombre);
+
+
+            int busqueda = db.BuscarProducto(producto);
+
+            if (busqueda > 0)
             {
                 return "Producto editado con éxito.";
             }

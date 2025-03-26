@@ -21,24 +21,17 @@
         }
 
         #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        /// 
-        private Panel PanelContainer;
         private void InitializeComponent()
         {
             BtTraerProducto = new Button();
-            lbResult = new Label();
             BtEditarP = new Button();
-            textBox1 = new TextBox();
+            TbBusqueda = new TextBox();
             BtBusqueda = new Button();
-            PanelContainer = new Panel();
             BtAgregarProve = new Button();
             BtEliminarP = new Button();
             BtAgregarP = new Button();
+            lbResult = new Label();
+            PanelContainer = new Panel();
             SuspendLayout();
             // 
             // BtTraerProducto
@@ -51,14 +44,6 @@
             BtTraerProducto.UseVisualStyleBackColor = true;
             BtTraerProducto.Click += BtTraerProducto_Click;
             // 
-            // lbResult
-            // 
-            lbResult.AutoSize = true;
-            lbResult.Location = new Point(299, 151);
-            lbResult.Name = "lbResult";
-            lbResult.Size = new Size(0, 15);
-            lbResult.TabIndex = 1;
-            // 
             // BtEditarP
             // 
             BtEditarP.Location = new Point(26, 171);
@@ -69,13 +54,13 @@
             BtEditarP.UseVisualStyleBackColor = true;
             BtEditarP.Click += BtEditarP_Click;
             // 
-            // textBox1
+            // TbBusqueda
             // 
-            textBox1.Location = new Point(39, 40);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Busqueda productos";
-            textBox1.Size = new Size(383, 23);
-            textBox1.TabIndex = 4;
+            TbBusqueda.Location = new Point(39, 40);
+            TbBusqueda.Name = "TbBusqueda";
+            TbBusqueda.PlaceholderText = "Busqueda productos";
+            TbBusqueda.Size = new Size(383, 23);
+            TbBusqueda.TabIndex = 4;
             // 
             // BtBusqueda
             // 
@@ -86,15 +71,6 @@
             BtBusqueda.Text = "busqueda";
             BtBusqueda.UseVisualStyleBackColor = true;
             BtBusqueda.Click += BtBusqueda_Click;
-            // 
-            // PanelContainer
-            // 
-            PanelContainer.AutoScroll = true;
-            PanelContainer.BackColor = Color.White;
-            PanelContainer.Location = new Point(266, 122);
-            PanelContainer.Name = "PanelContainer";
-            PanelContainer.Size = new Size(454, 294);
-            PanelContainer.TabIndex = 6;
             // 
             // BtAgregarProve
             // 
@@ -126,6 +102,23 @@
             BtAgregarP.UseVisualStyleBackColor = true;
             BtAgregarP.Click += BtAgregarP_Click;
             // 
+            // lbResult
+            // 
+            lbResult.AutoSize = true;
+            lbResult.Location = new Point(299, 151);
+            lbResult.Name = "lbResult";
+            lbResult.Size = new Size(0, 15);
+            lbResult.TabIndex = 1;
+            // 
+            // PanelContainer
+            // 
+            PanelContainer.AutoScroll = true;
+            PanelContainer.BackColor = Color.White;
+            PanelContainer.Location = new Point(266, 122);
+            PanelContainer.Name = "PanelContainer";
+            PanelContainer.Size = new Size(454, 294);
+            PanelContainer.TabIndex = 6;
+            // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -135,7 +128,7 @@
             Controls.Add(BtEliminarP);
             Controls.Add(BtAgregarProve);
             Controls.Add(BtBusqueda);
-            Controls.Add(textBox1);
+            Controls.Add(TbBusqueda);
             Controls.Add(BtEditarP);
             Controls.Add(lbResult);
             Controls.Add(BtTraerProducto);
@@ -149,12 +142,13 @@
         #endregion
 
         private Button BtTraerProducto;
-        private Label lbResult;
         private Button BtEditarP;
-        private TextBox textBox1;
+        private TextBox TbBusqueda;
         private Button BtBusqueda;
         private Button BtAgregarProve;
         private Button BtEliminarP;
         private Button BtAgregarP;
+        private Label lbResult;
+        private Panel PanelContainer;
     }
 }

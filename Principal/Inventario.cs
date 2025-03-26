@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using logica;
+using Modelo.Entity;
 
 namespace Principal
 {
@@ -22,7 +23,11 @@ namespace Principal
         private void BtBusqueda_Click(object sender, EventArgs e)
         {
 
+            UsuarioController us = new UsuarioController();
+
         }
+
+
 
         private void BtAgregarP_Click(object sender, EventArgs e)
         {
