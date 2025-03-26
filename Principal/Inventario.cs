@@ -23,16 +23,24 @@ namespace Principal
             UsuarioController us = new UsuarioController();
             var productos = us.TraerProductos();
 
-            string resultado = "";
+            // Limpiar el panel antes de agregar nuevos elementos
+            panelContainer.Controls.Clear();
+
+            int yOffset = 10; // Posición inicial Y dentro del Panel
+
             foreach (var producto in productos)
             {
-                resultado += "nombre: " + producto.nombre + "\n" + " descripciones: " + producto.descripcion + "\n" + " stock: " + producto.cantidad + "\n\n";
+                Label lblProducto = new Label();
+                lblProducto.Text = $"Nombre: {producto.nombre}\nDescripción: {producto.descripcion}\nStock: {producto.cantidad}";
+                lblProducto.AutoSize = true;
+                lblProducto.Location = new Point(10, yOffset);
+
+                panelContainer.Controls.Add(lblProducto);
+
+                yOffset += 50; // Espaciado entre elementos
             }
-
-            lbResult.Text = resultado;
-
-
         }
+
 
         private void btEditarP_Click(object sender, EventArgs e)
         {

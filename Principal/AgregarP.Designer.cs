@@ -36,6 +36,7 @@
             tbCantidad = new TextBox();
             tbPrecio = new TextBox();
             tbDescripcion = new TextBox();
+            tbProovedor = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -50,7 +51,7 @@
             // 
             // btAgregar
             // 
-            btAgregar.Location = new Point(39, 326);
+            btAgregar.Location = new Point(39, 367);
             btAgregar.Name = "btAgregar";
             btAgregar.Size = new Size(278, 56);
             btAgregar.TabIndex = 6;
@@ -106,11 +107,20 @@
             tbDescripcion.Size = new Size(278, 23);
             tbDescripcion.TabIndex = 39;
             // 
+            // tbProovedor
+            // 
+            tbProovedor.Location = new Point(39, 312);
+            tbProovedor.Name = "tbProovedor";
+            tbProovedor.PlaceholderText = "proveedor";
+            tbProovedor.Size = new Size(278, 23);
+            tbProovedor.TabIndex = 43;
+            // 
             // AgregarP
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(tbProovedor);
             Controls.Add(tbNombre);
             Controls.Add(tbCantidad);
             Controls.Add(tbPrecio);
@@ -134,5 +144,6 @@
         private TextBox tbCantidad;
         private TextBox tbPrecio;
         private TextBox tbDescripcion;
+        private TextBox tbProovedor;
     }
 }

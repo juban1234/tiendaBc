@@ -20,7 +20,7 @@ namespace logica
         }
 
 
-        public string GuardarProducto(string nombre, string descripcion, string precio, string cantidad, string imagen)
+        public string GuardarProducto(string nombre, string descripcion, string precio, string cantidad, string imagen,string id_provedor)
         {
             // Crear un objeto ProductoEntity
             ProductoEntity producto = new ProductoEntity
@@ -29,7 +29,8 @@ namespace logica
                 descripcion = descripcion,
                 precio = Convert.ToDouble(precio),  
                 cantidad = Convert.ToInt32(cantidad),  
-                imagen = Convert.FromBase64String(imagen)  
+                imagen = Convert.FromBase64String(imagen) , 
+                id_provedor = Convert.ToInt32(id_provedor)
             };
 
             BaseDatos db = new BaseDatos();

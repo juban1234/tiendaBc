@@ -16,5 +16,6 @@ namespace Modelo.Entity
         public int cantidad {  get; set; }
         public byte[] imagen { get; set; } 
         public DateTime fecha_agregado { get; set; }
+        public int id_provedor { get; set; }
     }
 }

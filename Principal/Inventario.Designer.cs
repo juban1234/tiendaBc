@@ -26,6 +26,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+        private Panel panelContainer;
         private void InitializeComponent()
         {
             btTraerProducto = new Button();
@@ -33,6 +35,7 @@
             btEditarP = new Button();
             textBox1 = new TextBox();
             btBusqueda = new Button();
+            panelContainer = new Panel();
             SuspendLayout();
             // 
             // btTraerProducto
@@ -81,6 +84,15 @@
             btBusqueda.UseVisualStyleBackColor = true;
             btBusqueda.Click += btBusqueda_Click;
             // 
+            // panelContainer
+            // 
+            panelContainer.AutoScroll = true;
+            panelContainer.BackColor = Color.White;
+            panelContainer.Location = new Point(273, 122);
+            panelContainer.Name = "panelContainer";
+            panelContainer.Size = new Size(454, 294);
+            panelContainer.TabIndex = 6;
+            // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -91,6 +103,7 @@
             Controls.Add(btEditarP);
             Controls.Add(lbResult);
             Controls.Add(btTraerProducto);
+            Controls.Add(panelContainer);
             Name = "Inventario";
             Text = "Inventario";
             ResumeLayout(false);

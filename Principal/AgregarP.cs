@@ -21,7 +21,8 @@ namespace Principal
         private void btAgregar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(tbNombre.Text) || string.IsNullOrEmpty(tbDescripcion.Text) ||
-                string.IsNullOrEmpty(tbPrecio.Text) || string.IsNullOrEmpty(tbCantidad.Text))
+                string.IsNullOrEmpty(tbPrecio.Text) || string.IsNullOrEmpty(tbCantidad.Text) || 
+                string.IsNullOrEmpty(tbProovedor.Text))
             {
                 tbResultado.Text = "Por favor complete todos los campos.";
                 tbResultado.ForeColor = Color.Red;
@@ -36,7 +37,8 @@ namespace Principal
                 tbDescripcion.Text,
                 tbPrecio.Text,
                 tbCantidad.Text,
-                tbImagen.Text  
+                tbImagen.Text,
+                tbProovedor.Text
             );
 
 

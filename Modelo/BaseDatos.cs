@@ -71,6 +71,7 @@ namespace Modelo
                     cmd.Parameters.AddWithValue("@p_descripcion", producto.descripcion);
                     cmd.Parameters.AddWithValue("@p_precio", producto.precio);
                     cmd.Parameters.AddWithValue("@p_cantidad", producto.cantidad);
+                    cmd.Parameters.AddWithValue("@pr_id" ,producto.id_provedor);
 
                     // Si la imagen no es null, agregarla como parámetro
                     if (producto.imagen != null)
