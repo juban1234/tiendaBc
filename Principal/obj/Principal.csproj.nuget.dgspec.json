@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SENA\\Documents\\tiendaBc\\Principal\\Principal.csproj": {}
+    "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Principal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SENA\\Documents\\tiendaBc\\logica\\logica.csproj": {
+    "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\logica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SENA\\Documents\\tiendaBc\\logica\\logica.csproj",
+        "projectUniqueName": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\logica.csproj",
         "projectName": "logica",
-        "projectPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\logica\\logica.csproj",
+        "projectPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\logica.csproj",
         "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\logica\\obj\\",
+        "outputPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\Modelo.csproj": {
-                "projectPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\Modelo.csproj"
+              "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj": {
+                "projectPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj"
               }
             }
           }
@@ -71,18 +71,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\Modelo.csproj": {
+    "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\Modelo.csproj",
+        "projectUniqueName": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj",
         "projectName": "Modelo",
-        "projectPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\Modelo.csproj",
+        "projectPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj",
         "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\obj\\",
+        "outputPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -138,18 +138,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\SENA\\Documents\\tiendaBc\\Principal\\Principal.csproj": {
+    "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Principal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SENA\\Documents\\tiendaBc\\Principal\\Principal.csproj",
+        "projectUniqueName": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Principal.csproj",
         "projectName": "Principal",
-        "projectPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\Principal\\Principal.csproj",
+        "projectPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\Principal.csproj",
         "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\Principal\\obj\\",
+        "outputPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Principal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -167,8 +167,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\SENA\\Documents\\tiendaBc\\logica\\logica.csproj": {
-                "projectPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\logica\\logica.csproj"
+              "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\logica.csproj": {
+                "projectPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\logica\\logica.csproj"
               }
             }
           }
@@ -212,7 +212,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

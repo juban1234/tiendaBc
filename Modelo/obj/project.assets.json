@@ -1613,11 +1613,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\Modelo.csproj",
+      "projectUniqueName": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj",
       "projectName": "Modelo",
-      "projectPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\Modelo.csproj",
+      "projectPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\Modelo.csproj",
       "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SENA\\Documents\\tiendaBc\\Modelo\\obj\\",
+      "outputPath": "C:\\Users\\SENA\\Documents\\juan grajales\\TiendaBc\\Modelo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1673,7 +1673,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
