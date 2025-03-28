@@ -84,14 +84,16 @@ namespace logica
 
         public string BuscarProducto(string nombre)
         {
-            
+
+            ProductoEntity producto = new ProductoEntity
+            {
+                nombre = Convert.ToString( nombre)
+            };
+
             BaseDatos db = new BaseDatos();
-            ProductoEntity producto = new ProductoEntity(nombre = nombre);
+            int resultado = db.BuscarProducto(producto); 
 
-
-            int busqueda = db.BuscarProducto(producto);
-
-            if (busqueda > 0)
+            if (resultado > 0)
             {
                 return "Producto editado con éxito.";
             }

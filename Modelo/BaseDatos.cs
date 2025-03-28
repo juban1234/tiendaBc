@@ -121,24 +121,27 @@ namespace Modelo
 
         public int BuscarProducto(ProductoEntity producto)
         {
-            int Busqueda = 0;
+            int produc = 0;
+
             try
             {
-                using(MySqlCommand comando = GetConnection().CreateCommand())
-                    {
-                        comando.CommandText = "BuscarProducto";
-                        comando.CommandType = System.Data.CommandType.StoredProcedure;
-                        comando.Parameters.AddWithValue("@p_nombre", producto.nombre);
-                        Busqueda = comando.ExecuteNonQuery();
-                    }
+                using (MySqlCommand cmd = GetConnection().CreateCommand())
+                {
+                    cmd.CommandText = "BuscarProductos";
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@p_nombre", producto.nombre);
+                    producto = cmd.ExecuteNonQuery();
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al buscar el producto: " + ex.Message);
             }
 
-            return Busqueda;    
+            return producto;
         }
+
+
         public int EditarProducto(ProductoEntity producto)
         {
             int editado = 0;
