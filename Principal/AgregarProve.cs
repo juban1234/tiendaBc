@@ -19,11 +19,32 @@ namespace Principal
 
         private void InitializeComponent()
         {
+            button1 = new Button();
             SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.Location = new Point(56, 279);
+            button1.Name = "button1";
+            button1.Size = new Size(92, 32);
+            button1.TabIndex = 0;
+            button1.Text = "Agregar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // AgregarProve
+            // 
             ClientSize = new Size(577, 451);
+            Controls.Add(button1);
             Name = "AgregarProve";
             ResumeLayout(false);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private Button button1;
     }
 }

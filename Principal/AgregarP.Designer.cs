@@ -87,7 +87,7 @@
             // 
             tbPrecio.Location = new Point(39, 180);
             tbPrecio.Name = "tbPrecio";
-            tbPrecio.PlaceholderText = "presio";
+            tbPrecio.PlaceholderText = "precio";
             tbPrecio.Size = new Size(278, 23);
             tbPrecio.TabIndex = 40;
             // 
