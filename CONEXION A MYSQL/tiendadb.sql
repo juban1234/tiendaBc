@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-03-2025 a las 22:46:40
+-- Tiempo de generación: 02-04-2025 a las 00:24:30
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.1.25
 
@@ -25,24 +25,23 @@ DELIMITER $$
 --
 -- Procedimientos
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `BuscarProductos` (IN `p_nombre` VARCHAR(255))   begin
-	select * from productos where p_nombre = nombre;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `AgregarProovedores` (IN `pr_nombre` VARCHAR(255), IN `pr_direccion` VARCHAR(255), IN `pr_telefono` VARCHAR(20), IN `pr_email` VARCHAR(100))   begin
+	insert into proveedores (nombre,direccion,telefono,email)
+    values (pr_nombre, pr_direccion, pr_telefono, pr_email);
 end$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `EditarProducto` (IN `p_nombre` VARCHAR(255), IN `p_descripcion` TEXT, IN `p_precio` DECIMAL(10,2), IN `p_cantidad` INT, IN `p_imagen` LONGBLOB)   BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `BuscarProductos` (IN `p_nombre` VARCHAR(255))   begin
+	select * from productos where nombre = p_nombre;
+end$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `EditarProducto` (IN `p_nombre` VARCHAR(255), IN `p_descripcion` TEXT, IN `p_precio` DECIMAL(10,2), IN `p_cantidad` INT)   BEGIN
     DECLARE v_id INT;
-
-    -- Buscar el ID del producto por su nombre
     SELECT id INTO v_id FROM Productos WHERE nombre = p_nombre LIMIT 1;
-
-    -- Verificar si el producto existe
     IF v_id IS NOT NULL THEN
-        -- Actualizar el producto utilizando la clave primaria (id)
         UPDATE Productos 
         SET descripcion = p_descripcion,
             precio = p_precio,
-            cantidad = p_cantidad,
-            imagen = p_imagen
+            cantidad = p_cantidad
         WHERE id = v_id;
     END IF;
 END$$
@@ -52,9 +51,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `EliminarProductoPorId` (IN `product
     DELETE FROM Productos WHERE nombre = producto_name;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `GuardarProducto` (IN `p_nombre` VARCHAR(255), IN `p_descripcion` TEXT, IN `p_precio` DECIMAL(10,2), IN `p_cantidad` INT, IN `p_imagen` LONGBLOB)   BEGIN
-    INSERT INTO Productos (nombre, descripcion, precio, cantidad, imagen)
-    VALUES (p_nombre, p_descripcion, p_precio, p_cantidad, p_imagen);
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GuardarProducto` (IN `p_nombre` VARCHAR(255), IN `p_descripcion` TEXT, IN `p_precio` DECIMAL(10,2), IN `p_cantidad` INT, IN `p_imagen` LONGBLOB, IN `pr_id` INT)   BEGIN
+    INSERT INTO Productos (nombre, descripcion, precio, cantidad, imagen,id_proveedor)
+    VALUES (p_nombre, p_descripcion, p_precio, p_cantidad, p_imagen,pr_id);
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `ObtenerProductos` ()   BEGIN
@@ -112,9 +111,17 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `cantidad`, `imagen`, `fecha_agregado`, `id_proveedor`) VALUES
-(18, 'ewe', 'wwwwwwww', 222.00, 22, '', '2025-03-20 18:50:11', NULL),
 (20, 'juu', 'ujuj', 23.00, 11, '', '2025-03-20 22:21:35', NULL),
-(21, 'juan', 'sus', 1.00, 1, '', '2025-03-21 20:13:05', NULL);
+(21, 'juan', 's', 1.00, 1, '', '2025-03-21 20:13:05', NULL),
+(22, 'papitas', 'p', 1.00, 1, '', '2025-03-21 22:23:58', NULL),
+(23, 'malmiss', 'fefef', 2.00, 1, '', '2025-03-25 17:39:47', NULL),
+(24, 'Laptop Gamer', '1', 1.00, 1, NULL, '2025-03-25 17:59:01', NULL),
+(35, 'Laptop Gamer2', 'Laptop con RTX 3060 y 16GB RAM', 2500.00, 10, NULL, '2025-03-26 18:18:19', NULL),
+(36, 'Laptop Gamer2', 'Laptop con RTX 3060 y 16GB RAM', 2500.00, 10, NULL, '2025-03-26 20:35:35', NULL),
+(37, 'merenges', 'e', 1.00, 1, '', '2025-03-26 20:46:25', 1),
+(38, 'pepinos', 'ddwd', 1.00, 1, '', '2025-03-26 20:54:03', 1),
+(39, 'jujuj', 'fefwf', 3.00, 11, '', '2025-03-26 21:10:29', 1),
+(40, 'jujuju', 'jujjjjjjjjjjjjjjjjjjjjjjj', 11111.00, 22, '', '2025-03-26 22:01:04', 1);
 
 -- --------------------------------------------------------
 
@@ -130,6 +137,13 @@ CREATE TABLE `proveedores` (
   `email` varchar(255) DEFAULT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `proveedores`
+--
+
+INSERT INTO `proveedores` (`id`, `nombre`, `direccion`, `telefono`, `email`, `fecha_creacion`) VALUES
+(1, 'hyh', 'yhyh', 'yhyh', 'hyh', '2025-03-26 20:43:11');
 
 -- --------------------------------------------------------
 
@@ -247,13 +261,13 @@ ALTER TABLE `inventarios`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
