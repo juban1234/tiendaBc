@@ -10,11 +10,10 @@ namespace logica
 {
     public class UsuarioController:BaseDatos
     {
-        private BaseDatos conexion = new BaseDatos();
-        // Método para ver productos
+        private BaseDatos db;
         public List<ProductoEntity> VerProductos()
         {
-            BaseDatos db = new BaseDatos();
+            db = new BaseDatos();
             List<ProductoEntity> productos = db.TraerProductos();  // Corrigiendo el nombre del método
 
             return productos;
@@ -32,7 +31,7 @@ namespace logica
                 id_provedor = Convert.ToInt32(id_provedor)
             };
 
-            BaseDatos db = new BaseDatos();
+            db = new BaseDatos();
             int resultado = db.GuardarProducto(producto);
 
             if (resultado > 0)
@@ -47,7 +46,7 @@ namespace logica
         public string EliminarUsuario(string name)
             {
             ProductoEntity producto = new ProductoEntity { nombre = name };
-            BaseDatos db = new BaseDatos();
+            db = new BaseDatos();
 
             int resultado = db.EliminarUsuario(producto);
             if (resultado > 0)
@@ -69,7 +68,7 @@ namespace logica
                 cantidad = Convert.ToInt32(cantidad),
             };
 
-            BaseDatos db = new BaseDatos();
+            db = new BaseDatos();
             int resultado = db.EditarProducto(producto);
 
             if (resultado > 0)
@@ -82,25 +81,10 @@ namespace logica
             }
         }
 
-        public string BuscarProducto(string nombre)
+        public ProductoEntity buscarProducto(string nombre)
         {
-
-            ProductoEntity producto = new ProductoEntity
-            {
-                nombre = Convert.ToString( nombre)
-            };
-
-            BaseDatos db = new BaseDatos();
-            int resultado = db.BuscarProducto(producto); 
-
-            if (resultado > 0)
-            {
-                return "Producto editado con éxito.";
-            }
-            else
-            {
-                return "Error al editado el producto.";
-            }
+            db = new BaseDatos();
+            return db.BuscarProducto(nombre); // Devuelve el producto encontrado o null
         }
     }
 }

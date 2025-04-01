@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using logica;
+using Modelo;
 using Modelo.Entity;
 
 namespace Principal
@@ -22,9 +23,18 @@ namespace Principal
 
         private void BtBusqueda_Click(object sender, EventArgs e)
         {
+            BaseDatos db = new BaseDatos();
+            UsuarioController controller = new UsuarioController();
+            ProductoEntity producto = db.BuscarProducto(TbBusqueda.Text);
 
-            UsuarioController us = new UsuarioController();
-
+            if (producto != null)
+            {
+                lbResult.Text = $"producto Nombre: {producto.nombre}, Precio: {producto.precio}, cantidad: {producto.cantidad}";
+            }
+            else
+            {
+                lbResult.Text = "No se encontró el producto.";
+            }
         }
 
 

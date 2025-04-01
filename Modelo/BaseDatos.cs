@@ -4,6 +4,7 @@ using MySql.Data.MySqlClient;
 
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -119,25 +120,39 @@ namespace Modelo
             return eliminado;
         }
 
-        public int BuscarProducto(ProductoEntity producto)
+        public ProductoEntity BuscarProducto(string nombre)
         {
-            int produc = 0;
+            ProductoEntity producto = null;
 
-            try
+            using (MySqlCommand conexion = GetConnection().CreateCommand())
             {
-                using (MySqlCommand cmd = GetConnection().CreateCommand())
+                try 
                 {
-                    cmd.CommandText = "BuscarProductos";
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@p_nombre", producto.nombre);
-                    producto = cmd.ExecuteNonQuery();
+
+                    conexion.CommandText = "BuscarProductos";
+                    conexion.CommandType = CommandType.StoredProcedure;
+                    conexion.Parameters.AddWithValue("@p_nombre", nombre);
+
+                    using (MySqlDataReader reader = conexion.ExecuteReader())
+                    {
+                        if (reader.Read()) // Solo obtiene el primer resultado
+                        {
+                            producto = new ProductoEntity
+                            {
+                                id = reader.GetInt32("id"),
+                                nombre = reader.GetString("nombre"),
+                                precio = reader.GetDouble("precio"),
+                                cantidad = reader.GetInt32("cantidad"),
+                                descripcion = reader.GetString("descripcion")
+                            };
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al buscar el producto: " + ex.Message);
-            }
-
             return producto;
         }
 

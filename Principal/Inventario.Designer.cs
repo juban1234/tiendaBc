@@ -36,7 +36,7 @@
             // 
             // BtTraerProducto
             // 
-            BtTraerProducto.Location = new Point(26, 271);
+            BtTraerProducto.Location = new Point(21, 296);
             BtTraerProducto.Name = "BtTraerProducto";
             BtTraerProducto.Size = new Size(131, 38);
             BtTraerProducto.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // BtEditarP
             // 
-            BtEditarP.Location = new Point(26, 171);
+            BtEditarP.Location = new Point(21, 196);
             BtEditarP.Name = "BtEditarP";
             BtEditarP.Size = new Size(131, 32);
             BtEditarP.TabIndex = 2;
@@ -64,9 +64,9 @@
             // 
             // BtBusqueda
             // 
-            BtBusqueda.Location = new Point(449, 40);
+            BtBusqueda.Location = new Point(456, 32);
             BtBusqueda.Name = "BtBusqueda";
-            BtBusqueda.Size = new Size(75, 23);
+            BtBusqueda.Size = new Size(89, 36);
             BtBusqueda.TabIndex = 5;
             BtBusqueda.Text = "busqueda";
             BtBusqueda.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             // 
             // BtAgregarProve
             // 
-            BtAgregarProve.Location = new Point(26, 333);
+            BtAgregarProve.Location = new Point(21, 358);
             BtAgregarProve.Name = "BtAgregarProve";
             BtAgregarProve.Size = new Size(131, 35);
             BtAgregarProve.TabIndex = 7;
@@ -84,7 +84,7 @@
             // 
             // BtEliminarP
             // 
-            BtEliminarP.Location = new Point(26, 221);
+            BtEliminarP.Location = new Point(21, 246);
             BtEliminarP.Name = "BtEliminarP";
             BtEliminarP.Size = new Size(131, 32);
             BtEliminarP.TabIndex = 8;
@@ -94,7 +94,7 @@
             // 
             // BtAgregarP
             // 
-            BtAgregarP.Location = new Point(26, 122);
+            BtAgregarP.Location = new Point(21, 147);
             BtAgregarP.Name = "BtAgregarP";
             BtAgregarP.Size = new Size(131, 32);
             BtAgregarP.TabIndex = 9;
@@ -105,7 +105,7 @@
             // lbResult
             // 
             lbResult.AutoSize = true;
-            lbResult.Location = new Point(299, 151);
+            lbResult.Location = new Point(39, 84);
             lbResult.Name = "lbResult";
             lbResult.Size = new Size(0, 15);
             lbResult.TabIndex = 1;
@@ -114,9 +114,9 @@
             // 
             PanelContainer.AutoScroll = true;
             PanelContainer.BackColor = Color.White;
-            PanelContainer.Location = new Point(266, 122);
+            PanelContainer.Location = new Point(221, 137);
             PanelContainer.Name = "PanelContainer";
-            PanelContainer.Size = new Size(454, 294);
+            PanelContainer.Size = new Size(499, 279);
             PanelContainer.TabIndex = 6;
             // 
             // Inventario
