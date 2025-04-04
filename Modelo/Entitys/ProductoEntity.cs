@@ -9,13 +9,13 @@ namespace Modelo.Entity
 {
     public class ProductoEntity
     {
-       public int id { get; set; }
-       public string nombre {  get; set; }
-       public string descripcion {  get; set; } 
-        public double precio {  get; set; } 
-        public int cantidad {  get; set; }
-        public byte[] imagen { get; set; } 
-        public DateTime fecha_agregado { get; set; }
-        public int id_provedor { get; set; }
+       public int Id { get; set; }
+       public string Nombre {  get; set; }
+       public string Descripcion {  get; set; } 
+        public double Precio {  get; set; } 
+        public int Cantidad {  get; set; }
+        public byte[] Imagen { get; set; } 
+        public DateTime Fecha_agregado { get; set; }
+        public int Id_provedor { get; set; }
     }
 }

@@ -8,20 +8,20 @@ using Modelo.Entity;
 
 namespace logica
 {
-    public class adminController:BaseDatos
+    public class AdminController:vendedorBD
     {
-        private BaseDatos db = new BaseDatos();
+        private AdminBD db = new AdminBD();
         public string GuardarProducto(string nombre, string descripcion, string precio, string cantidad, string imagen, string id_provedor)
         {
             // Crear un objeto ProductoEntity
             ProductoEntity producto = new ProductoEntity
             {
-                nombre = nombre,
-                descripcion = descripcion,
-                precio = Convert.ToDouble(precio),
-                cantidad = Convert.ToInt32(cantidad),
-                imagen = Convert.FromBase64String(imagen),
-                id_provedor = Convert.ToInt32(id_provedor)
+                Nombre = nombre,
+                Descripcion = descripcion,
+                Precio = Convert.ToDouble(precio),
+                Cantidad = Convert.ToInt32(cantidad),
+                Imagen = Convert.FromBase64String(imagen),
+                Id_provedor = Convert.ToInt32(id_provedor)
             };
 
             
@@ -38,7 +38,7 @@ namespace logica
         }
         public string EliminarUsuario(string name)
         {
-            ProductoEntity producto = new ProductoEntity { nombre = name };
+            ProductoEntity producto = new ProductoEntity { Nombre = name };
 
             int resultado = db.EliminarUsuario(producto);
             if (resultado > 0)
@@ -54,10 +54,10 @@ namespace logica
         {
             ProductoEntity producto = new ProductoEntity
             {
-                nombre = nombre,
-                descripcion = descripcion,
-                precio = Convert.ToDouble(precio),
-                cantidad = Convert.ToInt32(cantidad),
+                Nombre = nombre,
+                Descripcion = descripcion,
+                Precio = Convert.ToDouble(precio),
+                Cantidad = Convert.ToInt32(cantidad),
             };
 
             int resultado = db.EditarProducto(producto);

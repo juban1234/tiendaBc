@@ -8,9 +8,9 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace logica
 {
-    public class vendedorController:BaseDatos
+    public class VendedorController:vendedorBD
     {
-        private BaseDatos db = new BaseDatos();
+        private vendedorBD db = new vendedorBD();
         public List<ProductoEntity> VerProductos()
         {
             List<ProductoEntity> productos = db.TraerProductos();  // Corrigiendo el nombre del método

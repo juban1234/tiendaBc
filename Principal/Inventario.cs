@@ -1,6 +1,7 @@
 ﻿using logica;
 using Modelo;
 using Modelo.Entity;
+using Modelo.Entitys;
 
 namespace Principal
 {
@@ -11,24 +12,23 @@ namespace Principal
             InitializeComponent();
         }
 
+        private usuarioEntyti sesion = new usuarioEntyti();
 
         private void BtBusqueda_Click(object sender, EventArgs e)
         {
-            BaseDatos db = new BaseDatos();
-            vendedorController controller = new vendedorController();
+            vendedorBD db = new vendedorBD();
+            VendedorController controller = new VendedorController();
             ProductoEntity producto = db.BuscarProducto(TbBusqueda.Text);
 
             if (producto != null)
             {
-                lbResult.Text = $"producto Nombre: {producto.nombre}, Precio: {producto.precio}, cantidad: {producto.cantidad}";
+                lbResult.Text = $"producto Nombre: {producto.Nombre}, Precio: {producto.Precio}, cantidad: {producto.Cantidad}";
             }
             else
             {
                 lbResult.Text = "No se encontró el producto.";
             }
         }
-
-
 
         private void BtAgregarP_Click(object sender, EventArgs e)
         {
@@ -38,7 +38,7 @@ namespace Principal
 
         private void BtEditarP_Click(object sender, EventArgs e)
         {
-            EditarUsuario editar = new();
+            EditarProducto editar = new();
             editar.ShowDialog();
         }
 
@@ -50,7 +50,7 @@ namespace Principal
 
         private void BtTraerProducto_Click(object sender, EventArgs e)
         {
-            vendedorController us = new();
+            VendedorController us = new();
             var productos = us.TraerProductos();
 
 
@@ -61,7 +61,7 @@ namespace Principal
             foreach (var producto in productos)
             {
                 Label lblProducto = new();
-                lblProducto.Text = $"Nombre: {producto.nombre}\nDescripción: {producto.descripcion}\nStock: {producto.cantidad}";
+                lblProducto.Text = $"{producto.Nombre}\n {producto.Descripcion}\n {producto.Cantidad}";
                 lblProducto.AutoSize = true;
                 lblProducto.Location = new Point(10, yOffset);
 
@@ -77,6 +77,14 @@ namespace Principal
             agregarProve.ShowDialog();
         }
 
-
+        private void Inventario_Load(object sender, EventArgs e)
+        {
+            if (sesion.Rol != "admin")
+            {
+                BtAgregarP.Enabled = false;
+                BtEliminarP.Enabled = false;
+                BtEditarP.Enabled = false;
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class EditarUsuario
+    partial class EditarProducto
     {
         /// <summary>
         /// Required designer variable.

@@ -135,6 +135,7 @@
             Controls.Add(PanelContainer);
             Name = "Inventario";
             Text = "Inventario";
+            Load += Inventario_Load;
             ResumeLayout(false);
             PerformLayout();
         }

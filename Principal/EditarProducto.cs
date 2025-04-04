@@ -11,9 +11,9 @@ using logica;
 
 namespace Principal
 {
-    public partial class EditarUsuario : Form
+    public partial class EditarProducto : Form
     {
-        public EditarUsuario()
+        public EditarProducto()
         {
             InitializeComponent();
         }
