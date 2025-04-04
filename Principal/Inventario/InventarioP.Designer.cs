@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class Inventario
+    partial class InventarioP
     {
         /// <summary>
         /// Required designer variable.

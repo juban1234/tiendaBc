@@ -13,14 +13,15 @@ namespace Principal
 
         private void inventario_Click(object sender, EventArgs e)
         {
-            Inventario inventario = new Inventario();
-            ShowDialog(inventario);
+            InventarioP inventario = new InventarioP();
+            inventario.Show();
         }
 
         private void ventas_Click(object sender, EventArgs e)
         {
-            Ventas inventas = new Ventas();
-            ShowDialog(inventas);
+            Ventas ventas = new Ventas();
+            ventas.Show();
+            
         }
     }
 }

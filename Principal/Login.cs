@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 using BCrypt.Net;
 using Modelo.Entitys;
 using Principal.Usuario;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Principal
 {
@@ -23,14 +24,17 @@ namespace Principal
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
             Menu menu1 = new Menu();
+            menu1.FormClosed += (s, args) => Application.Exit();
+            menu1.Show();
+           
         }
 
         private void btRegistro_Click(object sender, EventArgs e)
         {
             Registro registro = new Registro();
-            ShowDialog(registro);
+            registro.Show();
         }
     }
 }

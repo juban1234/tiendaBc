@@ -51,6 +51,8 @@ namespace Principal
             {
                 tbResultado.ForeColor = Color.Red;
             }
+
+            this.Close();
         }
 
     }

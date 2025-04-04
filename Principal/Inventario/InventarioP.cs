@@ -5,9 +5,9 @@ using Modelo.Entitys;
 
 namespace Principal
 {
-    public partial class Inventario : Form
+    public partial class InventarioP : Form
     {
-        public Inventario()
+        public InventarioP()
         {
             InitializeComponent();
         }
@@ -73,16 +73,15 @@ namespace Principal
 
         private void BtAgregarProve_Click(object sender, EventArgs e)
         {
-            AgregarProve agregarProve = new();
-            agregarProve.ShowDialog();
+
         }
 
         private void Inventario_Load(object sender, EventArgs e)
         {
             if (sesion.Rol != "admin")
             {
-                BtAgregarP.Enabled = false;
-                BtEliminarP.Enabled = false;
+                //BtAgregarP.Enabled = false;
+                //BtEliminarP.Enabled = false;
                 BtEditarP.Enabled = false;
             }
         }
