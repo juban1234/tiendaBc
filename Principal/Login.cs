@@ -33,8 +33,10 @@ namespace Principal
 
         private void btRegistro_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Registro registro = new Registro();
             registro.Show();
+            
         }
     }
 }

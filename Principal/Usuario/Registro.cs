@@ -16,5 +16,14 @@ namespace Principal.Usuario
         {
             InitializeComponent();
         }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();    
+            Menu menu = new Menu();
+            menu.FormClosed += (s, args) => Application.Exit();
+            menu.Show();
+
+        }
     }
 }
