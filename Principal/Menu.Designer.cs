@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
-            button3 = new Button();
+            inventario = new Button();
+            ventas = new Button();
             label1 = new Label();
             SuspendLayout();
             // 
-            // button2
+            // inventario
             // 
-            button2.Location = new Point(28, 124);
-            button2.Name = "button2";
-            button2.Size = new Size(175, 52);
-            button2.TabIndex = 1;
-            button2.Text = "inventario";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            inventario.Location = new Point(28, 124);
+            inventario.Name = "inventario";
+            inventario.Size = new Size(175, 52);
+            inventario.TabIndex = 1;
+            inventario.Text = "inventario";
+            inventario.UseVisualStyleBackColor = true;
+            inventario.Click += inventario_Click;
             // 
-            // button3
+            // ventas
             // 
-            button3.Location = new Point(28, 203);
-            button3.Name = "button3";
-            button3.Size = new Size(175, 52);
-            button3.TabIndex = 2;
-            button3.Text = "Ventas";
-            button3.UseVisualStyleBackColor = true;
+            ventas.Location = new Point(28, 203);
+            ventas.Name = "ventas";
+            ventas.Size = new Size(175, 52);
+            ventas.TabIndex = 2;
+            ventas.Text = "Ventas";
+            ventas.UseVisualStyleBackColor = true;
+            ventas.Click += ventas_Click;
             // 
             // label1
             // 
@@ -68,8 +69,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(ventas);
+            Controls.Add(inventario);
             Name = "Menu";
             Text = "Form1";
             ResumeLayout(false);
@@ -77,8 +78,8 @@
         }
 
         #endregion
-        private Button button2;
-        private Button button3;
+        private Button inventario;
+        private Button ventas;
         private Label label1;
     }
 }

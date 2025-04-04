@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using BCrypt.Net;
 using Modelo.Entitys;
+using Principal.Usuario;
 
 namespace Principal
 {
@@ -38,43 +39,51 @@ namespace Principal
                     {
                         cmd.Parameters.AddWithValue("@usuario", usuario);
 
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
-                            string claveAlmacenada = reader.GetString(0);
-                            string rol = reader.GetString(1);
-
-                            // Verificar la contraseña cifrada
-                            if (BCrypt.Net.BCrypt.Verify(clave, claveAlmacenada))
+                            if (reader.Read())
                             {
-                                MessageBox.Show("Inicio de sesión exitoso");
+                                string claveAlmacenada = reader.GetString(0);
+                                string rol = reader.GetString(1);
 
-                                // Guardar el rol para futuras validaciones
-                                usuarioValitor.Rol = rol;
+                                // Verificar la contraseña cifrada
+                                if (BCrypt.Net.BCrypt.Verify(clave, claveAlmacenada))
+                                {
+                                    MessageBox.Show("Inicio de sesión exitoso");
 
-                                // Abrir el menú principal
-                                Menu menu = new Menu();
-                                menu.Show();
-                                this.Hide();
+                                    // Guardar el rol para futuras validaciones
+                                    usuarioValitor.Rol = rol;
+
+                                    // Abrir el menú principal
+                                    Menu menu = new Menu();
+                                    menu.Show();
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Contraseña incorrecta");
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("Contraseña incorrecta");
+                                MessageBox.Show("Usuario no encontrado");
                             }
                         }
-                        else
-                        {
-                            MessageBox.Show("Usuario no encontrado");
-                        }
-                    }
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
+
+                Menu menu1 = new Menu();
             }
+        }
+
+        private void btRegistro_Click(object sender, EventArgs e)
+        {
+            Registro registro = new Registro();
+            ShowDialog(registro);
         }
     }
 }

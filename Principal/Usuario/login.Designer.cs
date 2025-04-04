@@ -31,11 +31,12 @@
             btnIniciarSesion = new Button();
             tbUsuario = new TextBox();
             tbContraseña = new TextBox();
+            btRegistro = new Button();
             SuspendLayout();
             // 
             // btnIniciarSesion
             // 
-            btnIniciarSesion.Location = new Point(89, 309);
+            btnIniciarSesion.Location = new Point(56, 250);
             btnIniciarSesion.Name = "btnIniciarSesion";
             btnIniciarSesion.Size = new Size(123, 42);
             btnIniciarSesion.TabIndex = 0;
@@ -45,25 +46,36 @@
             // 
             // tbUsuario
             // 
-            tbUsuario.Location = new Point(121, 110);
+            tbUsuario.Location = new Point(46, 97);
             tbUsuario.Name = "tbUsuario";
             tbUsuario.PlaceholderText = "usuario";
-            tbUsuario.Size = new Size(100, 23);
+            tbUsuario.Size = new Size(186, 23);
             tbUsuario.TabIndex = 1;
             // 
             // tbContraseña
             // 
-            tbContraseña.Location = new Point(121, 182);
+            tbContraseña.Location = new Point(46, 150);
             tbContraseña.Name = "tbContraseña";
             tbContraseña.PlaceholderText = "contraseña";
-            tbContraseña.Size = new Size(100, 23);
+            tbContraseña.Size = new Size(200, 23);
             tbContraseña.TabIndex = 2;
+            // 
+            // btRegistro
+            // 
+            btRegistro.Location = new Point(66, 361);
+            btRegistro.Name = "btRegistro";
+            btRegistro.Size = new Size(75, 23);
+            btRegistro.TabIndex = 3;
+            btRegistro.Text = "Registro";
+            btRegistro.UseVisualStyleBackColor = true;
+            btRegistro.Click += btRegistro_Click;
             // 
             // login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btRegistro);
             Controls.Add(tbContraseña);
             Controls.Add(tbUsuario);
             Controls.Add(btnIniciarSesion);
@@ -78,5 +90,6 @@
         private Button btnIniciarSesion;
         private TextBox tbUsuario;
         private TextBox tbContraseña;
+        private Button btRegistro;
     }
 }
