@@ -156,7 +156,6 @@ namespace Modelo
             return producto;
         }
 
-
         public int EditarProducto(ProductoEntity producto)
         {
             int editado = 0;

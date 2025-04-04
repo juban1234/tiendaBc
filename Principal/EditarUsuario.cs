@@ -18,10 +18,10 @@ namespace Principal
             InitializeComponent();
         }
 
+        private adminController controller = new adminController();
+
         private void btEditarP_Click(object sender, EventArgs e)
         {
-
-            UsuarioController controller = new UsuarioController();
 
             string resultado = controller.EditarProducto(
                 tbNombre.Text,

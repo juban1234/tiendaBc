@@ -18,6 +18,8 @@ namespace Principal
             InitializeComponent();
         }
 
+        private adminController controller = new adminController();
+
         private void btAgregar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(tbNombre.Text) || string.IsNullOrEmpty(tbDescripcion.Text) ||
@@ -28,9 +30,6 @@ namespace Principal
                 tbResultado.ForeColor = Color.Red;
                 return;
             }
-
-            
-            UsuarioController controller = new UsuarioController();
 
             string resultado = controller.GuardarProducto(
                 tbNombre.Text,

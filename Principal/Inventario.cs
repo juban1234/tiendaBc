@@ -15,7 +15,7 @@ namespace Principal
         private void BtBusqueda_Click(object sender, EventArgs e)
         {
             BaseDatos db = new BaseDatos();
-            UsuarioController controller = new UsuarioController();
+            vendedorController controller = new vendedorController();
             ProductoEntity producto = db.BuscarProducto(TbBusqueda.Text);
 
             if (producto != null)
@@ -50,7 +50,7 @@ namespace Principal
 
         private void BtTraerProducto_Click(object sender, EventArgs e)
         {
-            UsuarioController us = new();
+            vendedorController us = new();
             var productos = us.TraerProductos();
 
 

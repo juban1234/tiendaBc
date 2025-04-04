@@ -15,6 +15,8 @@ namespace Principal
             
         }
 
+        private adminController controller = new adminController();
+
         private void btElimninar_Click(object sender, EventArgs e)
         {
 
@@ -25,7 +27,7 @@ namespace Principal
                 return;
             }
 
-            UsuarioController controller = new UsuarioController();
+            
 
 
             string eliminado = controller.EliminarUsuario(tbId.Text);
