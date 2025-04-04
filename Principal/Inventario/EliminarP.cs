@@ -15,7 +15,7 @@ namespace Principal
             
         }
 
-        private adminController controller = new adminController();
+        private AdminController controller = new AdminController();
 
         private void btElimninar_Click(object sender, EventArgs e)
         {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Principal
+namespace Principal.Inventario
 {
     public partial class AgregarProve : Form
     {

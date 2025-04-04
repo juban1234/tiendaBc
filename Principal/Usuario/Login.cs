@@ -38,36 +38,36 @@ namespace Principal
                     {
                         cmd.Parameters.AddWithValue("@usuario", usuario);
 
-                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
                         {
-                            if (reader.Read())
+                            string claveAlmacenada = reader.GetString(0);
+                            string rol = reader.GetString(1);
+
+                            // Verificar la contraseña cifrada
+                            if (BCrypt.Net.BCrypt.Verify(clave, claveAlmacenada))
                             {
-                                string claveAlmacenada = reader.GetString(0);
-                                string rol = reader.GetString(1);
+                                MessageBox.Show("Inicio de sesión exitoso");
 
-                                // Verificar la contraseña cifrada
-                                if (BCrypt.Net.BCrypt.Verify(clave, claveAlmacenada))
-                                {
-                                    MessageBox.Show("Inicio de sesión exitoso");
+                                // Guardar el rol para futuras validaciones
+                                usuarioValitor.Rol = rol;
 
-                                    // Guardar el rol para futuras validaciones
-                                    usuarioValitor.Rol = rol;
-
-                                    // Abrir el menú principal
-                                    Menu menu = new Menu();
-                                    menu.Show();
-                                    this.Hide();
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Contraseña incorrecta");
-                                }
+                                // Abrir el menú principal
+                                Menu menu = new Menu();
+                                menu.Show();
+                                this.Hide();
                             }
                             else
                             {
-                                MessageBox.Show("Usuario no encontrado");
+                                MessageBox.Show("Contraseña incorrecta");
                             }
                         }
+                        else
+                        {
+                            MessageBox.Show("Usuario no encontrado");
+                        }
+                    }
                     }
                 }
                 catch (Exception ex)

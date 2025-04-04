@@ -18,7 +18,7 @@ namespace Principal
             InitializeComponent();
         }
 
-        private adminController controller = new adminController();
+        private AdminController controller = new AdminController();
 
         private void btEditarP_Click(object sender, EventArgs e)
         {
