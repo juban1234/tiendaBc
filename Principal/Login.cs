@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using BCrypt.Net;
-using Modelo.Entitys;
+﻿
+using logica;
 using Principal.Usuario;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -22,12 +12,24 @@ namespace Principal
             InitializeComponent();
         }
 
+        private UsuarioController auth = new UsuarioController();
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Menu menu1 = new Menu();
-            menu1.FormClosed += (s, args) => Application.Exit();
-            menu1.Show();
+            string email = tbUsuario.Text;
+            string contraseña = tbContraseña.Text;
+
+            string resultado = auth.Login(email, contraseña);
+
+            MessageBox.Show(resultado);
+
+            if (resultado.StartsWith("Bienvenido"))
+            {
+                
+                Menu menu1 = new Menu();
+                menu1.FormClosed += (s, args) => Application.Exit();
+                menu1.Show();
+            }
+
            
         }
 

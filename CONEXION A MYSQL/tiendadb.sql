@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-04-2025 a las 00:19:29
+-- Tiempo de generación: 09-04-2025 a las 22:39:50
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.1.25
 
@@ -111,17 +111,16 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `cantidad`, `imagen`, `fecha_agregado`, `id_proveedor`) VALUES
-(21, 'juan', 's', 1.00, 1, '', '2025-03-21 20:13:05', NULL),
 (22, 'papitas', 'p', 1.00, 1, '', '2025-03-21 22:23:58', NULL),
 (23, 'malmiss', 'fefef', 2.00, 1, '', '2025-03-25 17:39:47', NULL),
 (24, 'Laptop Gamer', '1', 1.00, 1, NULL, '2025-03-25 17:59:01', NULL),
 (35, 'Laptop Gamer2', 'Laptop con RTX 3060 y 16GB RAM', 2500.00, 10, NULL, '2025-03-26 18:18:19', NULL),
 (36, 'Laptop Gamer2', 'Laptop con RTX 3060 y 16GB RAM', 2500.00, 10, NULL, '2025-03-26 20:35:35', NULL),
 (37, 'merenges', 'e', 1.00, 1, '', '2025-03-26 20:46:25', 1),
-(38, 'pepinos', 'ddwd', 1.00, 1, '', '2025-03-26 20:54:03', 1),
-(39, 'jujuj', 'fefwf', 3.00, 11, '', '2025-03-26 21:10:29', 1),
-(40, 'jujuju', 'jujjjjjjjjjjjjjjjjjjjjjjj', 11111.00, 22, '', '2025-03-26 22:01:04', 1),
-(41, 'grgrg', 'wdwd', 22.00, 2, '', '2025-04-02 22:16:42', 1);
+(40, 'jujuju', '1', 1.00, 1, '', '2025-03-26 22:01:04', 1),
+(42, 'merenges planos', 'wdede', 333.00, 3, '', '2025-04-04 20:21:21', 1),
+(43, 'dededd', 'dede', 11.00, 11, '', '2025-04-04 22:31:09', 1),
+(44, 'hthththhhhhhhhhhhhhhhhhhh', 'hhhhhhhhhhhh', 1.00, 11, '', '2025-04-04 22:32:22', 1);
 
 -- --------------------------------------------------------
 
@@ -268,7 +267,7 @@ ALTER TABLE `inventarios`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`

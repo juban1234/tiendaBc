@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using logica;
 
 namespace Principal.Usuario
 {
@@ -19,11 +20,27 @@ namespace Principal.Usuario
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            this.Hide();    
-            Menu menu = new Menu();
-            menu.FormClosed += (s, args) => Application.Exit();
-            menu.Show();
+            UsuarioController controller = new UsuarioController(); 
 
+            try
+            {
+                string nombre = TbNombre.Text;
+                string email = TbEmail.Text;
+                string contraseña = TbPassword.Text;
+                string rol =  TbRol.Text; // ComboBox de roles
+
+                string resultado = controller.RegistrarUsuario(nombre, email, contraseña, rol);
+
+                this.Hide();
+                Menu menu = new Menu();
+                menu.FormClosed += (s, args) => Application.Exit();
+                menu.Show();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al Editar el producto: " + ex.Message);
+            }
         }
     }
 }
