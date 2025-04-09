@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Modelo;
 using Modelo.Entitys;
+using BCrypt.Net;
+using Org.BouncyCastle.Crypto.Generators;
 
 namespace logica
 {
@@ -13,44 +15,61 @@ namespace logica
         private UsuarioBD db = new UsuarioBD();
         public string RegistrarUsuario(string nombre, string email, string contraseña, string rol)
         {
-            string contraseñaHash = Seguridad.HashPassword(contraseña); // Encriptar
-
-            usuarioEntyti usuario = new usuarioEntyti
+            try
             {
-                Nombre = nombre,
-                Email = email,
-                Contraseña = contraseñaHash,
-                Rol = rol
-            };
+                // Hashear la contraseña antes de guardarla
+                string contraseñaHasheada = BCrypt.Net.BCrypt.HashPassword(contraseña);
 
-            int resultado = db.GuardarUsuario(usuario);
+                usuarioEntyti nuevoUsuario = new usuarioEntyti
+                {
+                    Nombre = nombre,
+                    Email = email,
+                    Contraseña = contraseñaHasheada,
+                    Rol = rol
+                };
 
-            return resultado > 0 ? "Usuario registrado con éxito" : "Error al registrar el usuario";
+                int resultado = db.GuardarUsuario(nuevoUsuario); // método que guarda en la BD
+
+                if (resultado > 0)
+                {
+                    return "Usuario registrado exitosamente.";
+                }
+                else
+                {
+                    return "Error al registrar el usuario.";
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"Error: {ex.Message}";
+            }
         }
 
-        public string Login(string email, string contraseña)
+
+
+        public string Login(string email, string contraseña, out string rol)
         {
-            var usuario = db.BuscarUsuarioPorEmail(email);
+            rol = "";
 
-            if (usuario == null)
+            try
             {
-                return "Usuario no encontrado";
-            }
+                usuarioEntyti usuario = db.BuscarUsuarioPorEmail(email);
 
-            // Comparar la contraseña en texto plano (si no hasheaste)
-            if (usuario.Contraseña == contraseña)
-            {
-                return $"Bienvenido {usuario.Nombre}, Rol: {usuario.Rol}";
+                if (usuario != null && BCrypt.Net.BCrypt.Verify(contraseña, usuario.Contraseña))
+                {
+                    rol = usuario.Rol;
+                    return "Inicio de sesión exitoso.";
+                }
+                else
+                {
+                    return "Correo o contraseña incorrectos.";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return "Contraseña incorrecta";
+                return $"Error: {ex.Message}";
             }
-
-            // Si usas BCrypt:
-            // if (BCrypt.Net.BCrypt.Verify(contraseña, usuario.Contraseña)) { ... }
         }
-    }
 
 }
 

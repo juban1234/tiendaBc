@@ -18,13 +18,13 @@ namespace Principal
             string email = tbUsuario.Text;
             string contraseña = tbContraseña.Text;
 
-            string resultado = auth.Login(email, contraseña);
+            string resultado = auth.Login(email, contraseña,rol);
 
             MessageBox.Show(resultado);
 
             if (resultado.StartsWith("Bienvenido"))
             {
-                
+                this.Hide();
                 Menu menu1 = new Menu();
                 menu1.FormClosed += (s, args) => Application.Exit();
                 menu1.Show();
