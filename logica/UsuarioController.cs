@@ -44,33 +44,13 @@ namespace logica
                 return $"Error: {ex.Message}";
             }
         }
-
-
-
-        public string Login(string email, string contraseña, out string rol)
+        public usuarioEntyti Login(string correo, string contraseña)
         {
-            rol = "";
-
-            try
-            {
-                usuarioEntyti usuario = db.BuscarUsuarioPorEmail(email);
-
-                if (usuario != null && BCrypt.Net.BCrypt.Verify(contraseña, usuario.Contraseña))
-                {
-                    rol = usuario.Rol;
-                    return "Inicio de sesión exitoso.";
-                }
-                else
-                {
-                    return "Correo o contraseña incorrectos.";
-                }
-            }
-            catch (Exception ex)
-            {
-                return $"Error: {ex.Message}";
-            }
+            return db.BuscarUsuarioPorEmail(correo, contraseña);
         }
 
-}
+
+
+    }
 
 }

@@ -1,7 +1,8 @@
-﻿
-using logica;
+﻿using logica;
 using Principal.Usuario;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System;
+using System.Windows.Forms;
+
 
 namespace Principal
 {
@@ -12,25 +13,25 @@ namespace Principal
             InitializeComponent();
         }
 
-        private UsuarioController auth = new UsuarioController();
+        private UsuarioController controlador = new UsuarioController();
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string email = tbUsuario.Text;
+            string correo = tbUsuario.Text.Trim();
             string contraseña = tbContraseña.Text;
 
-            string resultado = auth.Login(email, contraseña,rol);
+            var usuario = controlador.Login(correo, contraseña);
 
-            MessageBox.Show(resultado);
-
-            if (resultado.StartsWith("Bienvenido"))
+            if (usuario != null)
             {
+                
+                Menu menu = new Menu(usuario.Nombre, usuario.Rol);
+                menu.Show();
                 this.Hide();
-                Menu menu1 = new Menu();
-                menu1.FormClosed += (s, args) => Application.Exit();
-                menu1.Show();
             }
-
-           
+            else
+            {
+                MessageBox.Show("Correo o contraseña incorrectos.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btRegistro_Click(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace Principal
             this.Hide();
             Registro registro = new Registro();
             registro.Show();
-            
+
         }
     }
 }

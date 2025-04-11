@@ -32,9 +32,9 @@ namespace Principal.Usuario
                 string resultado = controller.RegistrarUsuario(nombre, email, contraseña, rol);
 
                 this.Hide();
-                Menu menu = new Menu();
-                menu.FormClosed += (s, args) => Application.Exit();
-                menu.Show();
+                login login = new login();
+                login.FormClosed += (s, args) => Application.Exit();
+                login.Show();
 
             }
             catch (Exception ex)

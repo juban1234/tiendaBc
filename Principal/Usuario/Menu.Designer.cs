@@ -31,11 +31,12 @@
             inventario = new Button();
             ventas = new Button();
             label1 = new Label();
+            lbUsuario = new Label();
             SuspendLayout();
             // 
             // inventario
             // 
-            inventario.Location = new Point(28, 124);
+            inventario.Location = new Point(30, 225);
             inventario.Name = "inventario";
             inventario.Size = new Size(175, 52);
             inventario.TabIndex = 1;
@@ -45,7 +46,7 @@
             // 
             // ventas
             // 
-            ventas.Location = new Point(28, 203);
+            ventas.Location = new Point(30, 304);
             ventas.Name = "ventas";
             ventas.Size = new Size(175, 52);
             ventas.TabIndex = 2;
@@ -63,11 +64,20 @@
             label1.TabIndex = 4;
             label1.Text = "Tienda";
             // 
+            // lbUsuario
+            // 
+            lbUsuario.AutoSize = true;
+            lbUsuario.Location = new Point(115, 87);
+            lbUsuario.Name = "lbUsuario";
+            lbUsuario.Size = new Size(0, 15);
+            lbUsuario.TabIndex = 5;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbUsuario);
             Controls.Add(label1);
             Controls.Add(ventas);
             Controls.Add(inventario);
@@ -81,5 +91,6 @@
         private Button inventario;
         private Button ventas;
         private Label label1;
+        private Label lbUsuario;
     }
 }
