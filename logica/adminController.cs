@@ -1,76 +1,90 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Modelo;
 using Modelo.Entity;
 
 namespace logica
 {
-    public class AdminController:vendedorBD
+    public class AdminController
     {
-        private AdminBD db = new AdminBD();
+        private readonly AdminBD db = new AdminBD();
+
+        // Guarda un nuevo producto en la base de datos
         public string GuardarProducto(string nombre, string descripcion, string precio, string cantidad, string imagen, string id_provedor)
         {
-            // Crear un objeto ProductoEntity
-            ProductoEntity producto = new ProductoEntity
+            try
             {
-                Nombre = nombre,
-                Descripcion = descripcion,
-                Precio = Convert.ToDouble(precio),
-                Cantidad = Convert.ToInt32(cantidad),
-                Imagen = Convert.FromBase64String(imagen),
-                Id_provedor = Convert.ToInt32(id_provedor)
-            };
+                ProductoEntity producto = new ProductoEntity
+                {
+                    Nombre = nombre,
+                    Descripcion = descripcion,
+                    Precio = Convert.ToDouble(precio),
+                    Cantidad = Convert.ToInt32(cantidad),
+                    Imagen = string.IsNullOrEmpty(imagen) ? null : Convert.FromBase64String(imagen),
+                    Id_provedor = Convert.ToInt32(id_provedor)
+                };
 
-            
-            int resultado = db.GuardarProducto(producto);
+                int resultado = db.GuardarProducto(producto);
 
-            if (resultado > 0)
-            {
-                return "Producto guardado con éxito.";
+                return resultado > 0
+                    ? "Producto guardado con éxito."
+                    : "Error al guardar el producto.";
             }
-            else
+            catch (FormatException)
             {
-                return "Error al guardar el producto.";
+                return "Error: Verifica que el precio, cantidad e ID del proveedor sean valores numéricos válidos.";
+            }
+            catch (Exception ex)
+            {
+                return $"Error inesperado al guardar el producto: {ex.Message}";
             }
         }
-        public string EliminarUsuario(string name)
+
+        // Elimina un producto por su nombre
+        public string EliminarProducto(string nombre)
         {
-            ProductoEntity producto = new ProductoEntity { Nombre = name };
+            try
+            {
+                ProductoEntity producto = new ProductoEntity { Nombre = nombre };
 
-            int resultado = db.EliminarUsuario(producto);
-            if (resultado > 0)
-            {
-                return "Producto Eliminado con éxito.";
+                int resultado = db.EliminarUsuario(producto);
+
+                return resultado > 0
+                    ? "Producto eliminado con éxito."
+                    : "No se encontró el producto o no se pudo eliminar.";
             }
-            else
+            catch (Exception ex)
             {
-                return "Error al Eliminado el producto.";
+                return $"Error al eliminar el producto: {ex.Message}";
             }
         }
+
+        // Edita los datos de un producto
         public string EditarProducto(string nombre, string descripcion, string precio, string cantidad)
         {
-            ProductoEntity producto = new ProductoEntity
+            try
             {
-                Nombre = nombre,
-                Descripcion = descripcion,
-                Precio = Convert.ToDouble(precio),
-                Cantidad = Convert.ToInt32(cantidad),
-            };
+                ProductoEntity producto = new ProductoEntity
+                {
+                    Nombre = nombre,
+                    Descripcion = descripcion,
+                    Precio = Convert.ToDouble(precio),
+                    Cantidad = Convert.ToInt32(cantidad),
+                };
 
-            int resultado = db.EditarProducto(producto);
+                int resultado = db.EditarProducto(producto);
 
-            if (resultado > 0)
-            {
-                return "Producto editado con éxito.";
+                return resultado > 0
+                    ? "Producto editado con éxito."
+                    : "Error al editar el producto.";
             }
-            else
+            catch (FormatException)
             {
-                return "Error al editado el producto.";
+                return "Error: Asegúrate de ingresar números válidos para precio y cantidad.";
+            }
+            catch (Exception ex)
+            {
+                return $"Error inesperado al editar el producto: {ex.Message}";
             }
         }
-
     }
 }

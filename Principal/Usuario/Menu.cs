@@ -1,40 +1,33 @@
+using Modelo;
+using Modelo.Entitys;
 using Org.BouncyCastle.Pqc.Crypto.Lms;
 
 namespace Principal
 {
     public partial class Menu : Form
     {
-        private string nombreUsuario;
-        private string rolUsuario;
+        private usuarioEntyti usuarioActual;
 
-        public Menu(string nombre, string rol)
+        public Menu(usuarioEntyti usuario)
         {
             InitializeComponent();
-            nombreUsuario = nombre;
-            rolUsuario = rol;
+            usuarioActual = usuario;
+            AplicarPermisosPorRol();
         }
 
         private void AplicarPermisosPorRol()
         {
             // Ocultar o mostrar botones según el rol
-            switch (rolUsuario)
+            if (usuarioActual.Rol == "vendedor")
             {
-                case "administrador":
-                    // Tiene acceso a todo
-                    break;
-
-                case "vendedor":
-                    inventario.Visible = false; // No puede ver inventario
-                    break;
-
-                case "jefe":
-                    ventas.Visible = false; // No puede ver ventas
-                    break;
-
-                default:
-                    MessageBox.Show("Rol no reconocido. Cerrando aplicación.");
-                    this.Close();
-                    break;
+                // Por ejemplo, ocultar botón de inventario
+                inventario.Enabled = false;
+            }
+            else if (usuarioActual.Rol == "administrador")
+            {
+                // Mostrar todo si es administrador
+                ventas.Enabled = false;
+                inventario.Visible = true;
             }
         }
 
@@ -48,6 +41,14 @@ namespace Principal
         {
             Ventas ventas = new Ventas();
             ventas.Show();
+
+        }
+
+        private void btLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            login login = new login();
+            login.Show();
         }
     }
 }

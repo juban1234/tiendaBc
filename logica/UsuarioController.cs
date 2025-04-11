@@ -1,23 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Modelo;
 using Modelo.Entitys;
 using BCrypt.Net;
-using Org.BouncyCastle.Crypto.Generators;
 
 namespace logica
 {
-    public class UsuarioController:UsuarioBD
+    public class UsuarioController
     {
         private UsuarioBD db = new UsuarioBD();
+
         public string RegistrarUsuario(string nombre, string email, string contraseña, string rol)
         {
             try
             {
-                // Hashear la contraseña antes de guardarla
                 string contraseñaHasheada = BCrypt.Net.BCrypt.HashPassword(contraseña);
 
                 usuarioEntyti nuevoUsuario = new usuarioEntyti
@@ -28,29 +23,42 @@ namespace logica
                     Rol = rol
                 };
 
-                int resultado = db.GuardarUsuario(nuevoUsuario); // método que guarda en la BD
+                int resultado = db.GuardarUsuario(nuevoUsuario);
 
-                if (resultado > 0)
-                {
-                    return "Usuario registrado exitosamente.";
-                }
-                else
-                {
-                    return "Error al registrar el usuario.";
-                }
+                return resultado > 0 ? "Usuario registrado exitosamente." : "Error al registrar el usuario.";
             }
             catch (Exception ex)
             {
                 return $"Error: {ex.Message}";
             }
         }
+
         public usuarioEntyti Login(string correo, string contraseña)
         {
-            return db.BuscarUsuarioPorEmail(correo, contraseña);
+            usuarioEntyti usuario = db.BuscarUsuarioPorEmail(correo);
+
+            if (usuario != null)
+            {
+                Console.WriteLine("Hash guardado: " + usuario.Contraseña);
+
+                bool contraseñaValida = BCrypt.Net.BCrypt.Verify(contraseña, usuario.Contraseña);
+
+                if (contraseñaValida)
+                {
+                    return usuario;
+                }
+                else
+                {
+                    Console.WriteLine("La contraseña no coincide.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No se encontró el usuario.");
+            }
+
+            return null;
         }
 
-
-
     }
-
 }

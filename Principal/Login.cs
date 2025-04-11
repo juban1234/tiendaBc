@@ -1,7 +1,9 @@
 ﻿using logica;
+using Modelo.Entitys;
 using Principal.Usuario;
 using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 
 namespace Principal
@@ -16,15 +18,16 @@ namespace Principal
         private UsuarioController controlador = new UsuarioController();
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string correo = tbUsuario.Text.Trim();
+            string correo = tbUsuario.Text;
             string contraseña = tbContraseña.Text;
+            
 
-            var usuario = controlador.Login(correo, contraseña);
+            usuarioEntyti usuario = controlador.Login(correo, contraseña);
 
             if (usuario != null)
             {
                 
-                Menu menu = new Menu(usuario.Nombre, usuario.Rol);
+                Menu menu = new Menu(usuario);
                 menu.Show();
                 this.Hide();
             }

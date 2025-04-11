@@ -30,7 +30,7 @@ namespace Principal
             
 
 
-            string eliminado = controller.EliminarUsuario(tbId.Text);
+            string eliminado = controller.EliminarProducto(tbId.Text);
 
             resultado.Text = eliminado;
 

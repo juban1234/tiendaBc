@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Xml.Linq;
+﻿using Modelo.Entity;
 using Modelo;
-using Modelo.Entity;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace logica
+public class VendedorController
 {
-    public class VendedorController:vendedorBD
-    {
-        private vendedorBD db = new vendedorBD();
-        public List<ProductoEntity> VerProductos()
-        {
-            List<ProductoEntity> productos = db.TraerProductos();  // Corrigiendo el nombre del método
+    private vendedorBD db = new vendedorBD();
 
-            return productos;
-        }
-        public ProductoEntity buscarProducto(string nombre)
-        {
-            return db.BuscarProducto(nombre); // Devuelve el producto encontrado o null
-        }
+    public List<ProductoEntity> VerProductos()
+    {
+        return db.TraerProductos();
+    }
+
+    public ProductoEntity BuscarProducto(string nombre)
+    {
+        if (string.IsNullOrWhiteSpace(nombre))
+            return null;
+
+        return db.BuscarProducto(nombre);
     }
 }
-

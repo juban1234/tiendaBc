@@ -12,23 +12,28 @@ namespace Modelo
 {
     public class UsuarioBD:ConexionMsql
     {
-        private ConexionMsql conexion = new ConexionMsql();
+        private ConexionMsql db = new ConexionMsql();
 
+        // usuarioBD.cs
         public usuarioEntyti BuscarUsuarioPorEmail(string email)
         {
-            using (var conexion = conexion.Connect())
-            {
-                string query = "SELECT nombre, rol, contraseña FROM usuarios WHERE email = @email";
+            usuarioEntyti usuario = null;
 
-                using (var cmd = new MySqlCommand(query, conexion))
+            try
+            {
+                using (MySqlCommand cmd = GetConnection().CreateCommand())
                 {
-                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.CommandText = "BuscarUsuarioPorEmail"; 
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    // Parámetro del procedimiento
+                    cmd.Parameters.AddWithValue("@p_email", email);
 
                     using (var reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            return new usuarioEntyti
+                            usuario = new usuarioEntyti
                             {
                                 Nombre = reader.GetString("nombre"),
                                 Rol = reader.GetString("rol"),
@@ -38,10 +43,13 @@ namespace Modelo
                     }
                 }
             }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error al buscar usuario: " + ex.Message);
+            }
 
-            return null;
+            return usuario;
         }
-
 
         public int GuardarUsuario(usuarioEntyti usuario)
         {
@@ -58,7 +66,7 @@ namespace Modelo
 
                     cmd.Parameters.AddWithValue("@p_nombre", usuario.Nombre);
                     cmd.Parameters.AddWithValue("@p_email", usuario.Email);
-                    cmd.Parameters.AddWithValue("@p_contraseña", hash);
+                    cmd.Parameters.AddWithValue("@p_contraseña", usuario.Contraseña);
                     cmd.Parameters.AddWithValue("@p_rol", usuario.Rol);
 
                     resultado = cmd.ExecuteNonQuery();

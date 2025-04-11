@@ -32,6 +32,7 @@
             ventas = new Button();
             label1 = new Label();
             lbUsuario = new Label();
+            btLogin = new Button();
             SuspendLayout();
             // 
             // inventario
@@ -72,11 +73,22 @@
             lbUsuario.Size = new Size(0, 15);
             lbUsuario.TabIndex = 5;
             // 
+            // btLogin
+            // 
+            btLogin.Location = new Point(632, 164);
+            btLogin.Name = "btLogin";
+            btLogin.Size = new Size(75, 23);
+            btLogin.TabIndex = 6;
+            btLogin.Text = "button1";
+            btLogin.UseVisualStyleBackColor = true;
+            btLogin.Click += btLogin_Click;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btLogin);
             Controls.Add(lbUsuario);
             Controls.Add(label1);
             Controls.Add(ventas);
@@ -92,5 +104,6 @@
         private Button ventas;
         private Label label1;
         private Label lbUsuario;
+        private Button btLogin;
     }
 }

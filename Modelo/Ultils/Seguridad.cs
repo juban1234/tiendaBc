@@ -5,11 +5,15 @@ public static class Seguridad
 {
     public static string HashPassword(string password)
     {
-        using (SHA256 sha256 = SHA256.Create())
+        using (SHA256 sha256Hash = SHA256.Create())
         {
-            byte[] bytes = Encoding.UTF8.GetBytes(password);
-            byte[] hash = sha256.ComputeHash(bytes);
-            return Convert.ToBase64String(hash);
+            byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+            StringBuilder builder = new StringBuilder();
+            foreach (var b in bytes)
+            {
+                builder.Append(b.ToString("x2"));
+            }
+            return builder.ToString();
         }
     }
 }

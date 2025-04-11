@@ -51,7 +51,7 @@ namespace Principal
         private void BtTraerProducto_Click(object sender, EventArgs e)
         {
             VendedorController us = new();
-            var productos = us.TraerProductos();
+            var productos = us.VerProductos();
 
 
             PanelContainer.Controls.Clear();
@@ -76,14 +76,5 @@ namespace Principal
 
         }
 
-        private void Inventario_Load(object sender, EventArgs e)
-        {
-            if (sesion.Rol != "admin")
-            {
-                //BtAgregarP.Enabled = false;
-                //BtEliminarP.Enabled = false;
-                BtEditarP.Enabled = false;
-            }
-        }
     }
 }
