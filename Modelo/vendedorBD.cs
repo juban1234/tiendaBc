@@ -54,15 +54,13 @@ namespace Modelo
             return productos;
 
         }
-       
-
         public ProductoEntity BuscarProducto(string nombre)
         {
             ProductoEntity producto = null;
 
             using (MySqlCommand conexion = GetConnection().CreateCommand())
             {
-                try 
+                try
                 {
 
                     conexion.CommandText = "BuscarProductos";
@@ -92,6 +90,12 @@ namespace Modelo
             return producto;
         }
 
+        public ProductoEntity venderProducto(string nombre, int cantidad)
+        {
+            ProductoEntity venta = null;
+
+            return venta;
+        }
     }
 }
 
