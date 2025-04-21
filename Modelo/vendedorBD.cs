@@ -1,5 +1,6 @@
 ﻿
 using Modelo.Entity;
+using Modelo.Entitys;
 using MySql.Data.MySqlClient;
 
 using System;
@@ -69,7 +70,7 @@ namespace Modelo
 
                     using (MySqlDataReader reader = conexion.ExecuteReader())
                     {
-                        if (reader.Read()) // Solo obtiene el primer resultado
+                        if (reader.Read()) 
                         {
                             producto = new ProductoEntity
                             {
@@ -90,11 +91,29 @@ namespace Modelo
             return producto;
         }
 
-        public ProductoEntity venderProducto(string nombre, int cantidad)
+        public int venderProducto(ProductoEntity producto)
         {
-            ProductoEntity venta = null;
+            int vender = 0;
 
-            return venta;
+            try
+            {
+                using (MySqlCommand comando = GetConnection().CreateCommand())
+                {
+                    comando.CommandText = "VenderProducto";
+                    comando.CommandType = System.Data.CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@p_nombre_producto", producto.Nombre);
+                    comando.Parameters.AddWithValue("@p_cantidad", producto.Cantidad);
+                    comando.Parameters.AddWithValue("@p_id_usuario", producto.Id);
+                    vender = comando.ExecuteNonQuery();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al Vender el producto: " + ex.Message);
+            }
+
+            return vender;
         }
     }
 }

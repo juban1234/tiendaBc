@@ -1,6 +1,7 @@
 using Modelo;
 using Modelo.Entitys;
 using Org.BouncyCastle.Pqc.Crypto.Lms;
+using Principal.Ventas;
 
 namespace Principal
 {
@@ -39,7 +40,7 @@ namespace Principal
 
         private void ventas_Click(object sender, EventArgs e)
         {
-            Ventas ventas = new Ventas();
+            Venta_p ventas = new Venta_p();
             ventas.Show();
 
         }
