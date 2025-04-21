@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-04-2025 a las 22:39:50
+-- Tiempo de generación: 21-04-2025 a las 20:53:11
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.1.25
 
@@ -34,6 +34,12 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `BuscarProductos` (IN `p_nombre` VAR
 	select * from productos where nombre = p_nombre;
 end$$
 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `BuscarUsuarioPorEmail` (IN `p_email` VARCHAR(255))   BEGIN
+    SELECT nombre, rol, contraseña
+    FROM usuarios
+    WHERE email = p_email;
+END$$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `EditarProducto` (IN `p_nombre` VARCHAR(255), IN `p_descripcion` TEXT, IN `p_precio` DECIMAL(10,2), IN `p_cantidad` INT)   BEGIN
     DECLARE v_id INT;
     SELECT id INTO v_id FROM Productos WHERE nombre = p_nombre LIMIT 1;
@@ -58,6 +64,11 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `ObtenerProductos` ()   BEGIN
     SELECT * FROM Productos;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `RegistrarUsuario` (IN `p_nombre` VARCHAR(255), IN `p_email` VARCHAR(255), IN `p_contraseña` VARCHAR(255), IN `p_rol` ENUM('vendedor','administrador','jefe'))   BEGIN
+    INSERT INTO usuarios (nombre, email, contraseña, rol)
+    VALUES (p_nombre, p_email, p_contraseña, p_rol);
 END$$
 
 DELIMITER ;
@@ -120,7 +131,8 @@ INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `cantidad`, `i
 (40, 'jujuju', '1', 1.00, 1, '', '2025-03-26 22:01:04', 1),
 (42, 'merenges planos', 'wdede', 333.00, 3, '', '2025-04-04 20:21:21', 1),
 (43, 'dededd', 'dede', 11.00, 11, '', '2025-04-04 22:31:09', 1),
-(44, 'hthththhhhhhhhhhhhhhhhhhh', 'hhhhhhhhhhhh', 1.00, 11, '', '2025-04-04 22:32:22', 1);
+(44, 'hthththhhhhhhhhhhhhhhhhhh', 'hhhhhhhhhhhh', 1.00, 11, '', '2025-04-04 22:32:22', 1),
+(45, 'camron', 'efefef', 12121.00, 1, NULL, '2025-04-11 21:59:00', 1);
 
 -- --------------------------------------------------------
 
@@ -154,7 +166,7 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `contraseña` varchar(255) NOT NULL,
+  `contraseña` varchar(100) DEFAULT NULL,
   `rol` enum('vendedor','administrador','jefe') NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -164,7 +176,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `contraseña`, `rol`, `fecha_creacion`) VALUES
-(1, 'pepe', 'test1@gmail.com', '12345678', 'administrador', '2025-04-02 18:44:56');
+(12, 'papw', 'rgjrogrkog1@gmail.com', '$2a$11$357ZrwaX/2Fo0MuGBwsCV.wm8/SLK9pKPMM9O8.D2hiMEjMUGQL/a', 'vendedor', '2025-04-11 21:08:10'),
+(13, 'juan', 'gjuanesteban413@gmail.com', '$2a$11$DQg//Yzzx56u.PvDMWA8S.lhmu3WcrQ0Fdrg.dcnsPksmtQM9D2Y6', 'vendedor', '2025-04-11 21:09:19'),
+(14, 'pepito', 'alexzo8677@gmail.com', '$2a$11$Kf1oLAGzBO2YIM7CR3bIB.Eg5l3F5DspM5WJurAd3KHLFDbRtJhzW', 'administrador', '2025-04-11 21:19:43'),
+(15, 'juan', 'ewewewe@gmail.com', '$2a$11$Wl2hDjOp3moB3Bnc4Y61I.797uSwRTyROeyJ.NJN0Jf63ef20eO7K', 'administrador', '2025-04-11 21:55:41'),
+(16, 'miguel', 'efefefef@gmail.com', '$2a$11$TDYVM2FkmMbMn8GlAJVereiANv0hEk4kFQnlK5c4GIpfCQ61ZK41.', 'administrador', '2025-04-11 22:25:46');
 
 -- --------------------------------------------------------
 
@@ -267,7 +283,7 @@ ALTER TABLE `inventarios`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
@@ -279,7 +295,7 @@ ALTER TABLE `proveedores`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
