@@ -33,6 +33,8 @@
             label1 = new Label();
             lbUsuario = new Label();
             btLogin = new Button();
+            lblBienvenida = new Label();
+            lblRol = new Label();
             SuspendLayout();
             // 
             // inventario
@@ -83,11 +85,31 @@
             btLogin.UseVisualStyleBackColor = true;
             btLogin.Click += btLogin_Click;
             // 
+            // lblBienvenida
+            // 
+            lblBienvenida.AutoSize = true;
+            lblBienvenida.Location = new Point(71, 82);
+            lblBienvenida.Name = "lblBienvenida";
+            lblBienvenida.Size = new Size(38, 15);
+            lblBienvenida.TabIndex = 7;
+            lblBienvenida.Text = "label2";
+            // 
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.Location = new Point(71, 121);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(38, 15);
+            lblRol.TabIndex = 8;
+            lblRol.Text = "label2";
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblRol);
+            Controls.Add(lblBienvenida);
             Controls.Add(btLogin);
             Controls.Add(lbUsuario);
             Controls.Add(label1);
@@ -95,6 +117,7 @@
             Controls.Add(inventario);
             Name = "Menu";
             Text = "Form1";
+            Load += Menu_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -105,5 +128,7 @@
         private Label label1;
         private Label lbUsuario;
         private Button btLogin;
+        private Label lblBienvenida;
+        private Label lblRol;
     }
 }

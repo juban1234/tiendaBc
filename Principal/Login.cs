@@ -21,13 +21,19 @@ namespace Principal
             string correo = tbUsuario.Text;
             string contraseña = tbContraseña.Text;
             
+            
 
             usuarioEntyti usuario = controlador.Login(correo, contraseña);
 
             if (usuario != null)
             {
-                
-                Menu menu = new Menu(usuario);
+                usuarioEntyti.Id_usuario = usuario.Id_usuario;
+                usuarioEntyti.NombreUsuario = usuario.Nombre;
+                usuarioEntyti.Rol = usuario.Rol;
+
+                MessageBox.Show("Bienvenido " + usuario.Nombre);
+
+                Menu menu = new Menu();
                 menu.Show();
                 this.Hide();
             }
