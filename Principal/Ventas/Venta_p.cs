@@ -12,8 +12,9 @@ namespace Principal.Ventas
 
         private void BtBusqueda_Click(object sender, EventArgs e)
         {
+            vendedorBD db = new vendedorBD();
             VendedorController controller = new VendedorController();
-            ProductoEntity producto = controller.BuscarProducto(TbBusqueda.Text);
+            ProductoEntity producto = db.BuscarProducto(TbBusqueda.Text);
 
             if (producto != null)
             {

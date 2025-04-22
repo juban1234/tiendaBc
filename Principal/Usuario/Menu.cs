@@ -12,6 +12,24 @@ namespace Principal
         public Menu(usuarioEntyti usuario)
         {
             InitializeComponent();
+            usuarioActual = usuario;
+            AplicarPermisosPorRol();
+        }
+
+        private void AplicarPermisosPorRol()
+        {
+            // Ocultar o mostrar botones según el rol
+            if (usuarioActual.Rol == "vendedor")
+            {
+                // Por ejemplo, ocultar botón de inventario
+                inventario.Enabled = false;
+            }
+            else if (usuarioActual.Rol == "administrador")
+            {
+                // Mostrar todo si es administrador
+                ventas.Enabled = false;
+                inventario.Visible = true;
+            }
         }
 
         private void inventario_Click(object sender, EventArgs e)
@@ -32,25 +50,6 @@ namespace Principal
             this.Close();
             login login = new login();
             login.Show();
-        }
-
-        private void Menu_Load(object sender, EventArgs e)
-        {
-            lblBienvenida.Text = "Bienvenido: " + usuarioEntyti.NombreUsuario;
-            lblRol.Text = "Rol: " + usuarioEntyti.Rol;
-
-            // Ocultar o mostrar botones según el rol
-            if (usuarioActual.Rol == "vendedor")
-            {
-                // Por ejemplo, ocultar botón de inventario
-                inventario.Enabled = false;
-            }
-            else if (usuarioActual.Rol == "administrador")
-            {
-                // Mostrar todo si es administrador
-                ventas.Enabled = false;
-                inventario.Visible = true;
-            }
         }
     }
 }

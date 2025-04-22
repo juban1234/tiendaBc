@@ -1,14 +1,21 @@
-﻿using Modelo.Entitys;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Principal.Ventas;
 
 namespace Principal.Ventas
 {
     public partial class venderProducto : Form
     {
-        private usuarioEntyti idUser;
-        public venderProducto(usuarioEntyti usuario)
+        public venderProducto()
         {
             InitializeComponent();
-            idUser = usuario;
         }
 
         private VendedorController controller = new VendedorController();
@@ -17,15 +24,13 @@ namespace Principal.Ventas
         {
             try
             {
-
                 controller.VentaProducto(
                 TbNombre_P.Text,
                 TbCantidad_P.Text,
-                idUser
+                TbUsuario.Text
                 );
-                MessageBox.Show("producto vendido");
 
-                FormularioUtils.LimpiarControles(this);
+                this.Close();
             }
             catch (FormatException)
             {

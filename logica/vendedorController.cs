@@ -19,12 +19,12 @@ public class VendedorController
         return db.BuscarProducto(nombre);
     }
 
-    public int VentaProducto(string nombre , string cantidad ,int usuario)
+    public int VentaProducto(string nombre , string cantidad ,string usuario)
     {
 
         ProductoEntity producto = new ProductoEntity
         {
-            Id = usuario,
+            Id = Convert.ToInt32(usuario),
             Nombre = nombre,
             Cantidad = Convert.ToInt32(cantidad)
         };
