@@ -56,5 +56,20 @@ namespace Principal.Ventas
             venderProducto vender = new venderProducto();
             vender.Show();
         }
+
+        private void Venta_p_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMinizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

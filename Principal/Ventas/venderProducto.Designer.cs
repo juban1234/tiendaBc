@@ -28,45 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(venderProducto));
             button1 = new Button();
             TbNombre_P = new TextBox();
             TbCantidad_P = new TextBox();
             TbUsuario = new TextBox();
             LbResult = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            panel1 = new Panel();
+            label1 = new Label();
+            btnCerrar = new PictureBox();
+            btnMinizar = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinizar).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(56, 295);
+            button1.BackColor = Color.FromArgb(40, 40, 40);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(20, 20, 20);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.LightGray;
+            button1.Location = new Point(379, 254);
             button1.Name = "button1";
-            button1.Size = new Size(118, 40);
+            button1.Size = new Size(272, 40);
             button1.TabIndex = 0;
-            button1.Text = "vender producto";
-            button1.UseVisualStyleBackColor = true;
+            button1.Text = "Vender";
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // TbNombre_P
             // 
-            TbNombre_P.Location = new Point(56, 94);
+            TbNombre_P.BackColor = Color.FromArgb(15, 15, 15);
+            TbNombre_P.BorderStyle = BorderStyle.None;
+            TbNombre_P.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TbNombre_P.ForeColor = Color.DimGray;
+            TbNombre_P.Location = new Point(312, 81);
             TbNombre_P.Name = "TbNombre_P";
             TbNombre_P.PlaceholderText = "nombre producto";
-            TbNombre_P.Size = new Size(131, 23);
+            TbNombre_P.Size = new Size(416, 20);
             TbNombre_P.TabIndex = 1;
             // 
             // TbCantidad_P
             // 
-            TbCantidad_P.Location = new Point(56, 140);
+            TbCantidad_P.BackColor = Color.FromArgb(15, 15, 15);
+            TbCantidad_P.BorderStyle = BorderStyle.None;
+            TbCantidad_P.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TbCantidad_P.Location = new Point(312, 136);
             TbCantidad_P.Name = "TbCantidad_P";
             TbCantidad_P.PlaceholderText = "cantidad producto";
-            TbCantidad_P.Size = new Size(131, 23);
+            TbCantidad_P.Size = new Size(416, 20);
             TbCantidad_P.TabIndex = 2;
             // 
             // TbUsuario
             // 
-            TbUsuario.Location = new Point(56, 206);
+            TbUsuario.BackColor = Color.FromArgb(15, 15, 15);
+            TbUsuario.BorderStyle = BorderStyle.None;
+            TbUsuario.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TbUsuario.Location = new Point(312, 195);
             TbUsuario.Name = "TbUsuario";
             TbUsuario.PlaceholderText = "usuario";
-            TbUsuario.Size = new Size(100, 23);
+            TbUsuario.Size = new Size(416, 20);
             TbUsuario.TabIndex = 3;
             // 
             // LbResult
@@ -78,18 +107,106 @@
             LbResult.TabIndex = 4;
             LbResult.Text = "l";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.DimGray;
+            pictureBox1.Enabled = false;
+            pictureBox1.Location = new Point(312, 107);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(416, 1);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.DimGray;
+            pictureBox2.Enabled = false;
+            pictureBox2.Location = new Point(312, 162);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(416, 1);
+            pictureBox2.TabIndex = 9;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.DimGray;
+            pictureBox3.Enabled = false;
+            pictureBox3.Location = new Point(312, 221);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(416, 1);
+            pictureBox3.TabIndex = 10;
+            pictureBox3.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Green;
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(250, 330);
+            panel1.TabIndex = 11;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DimGray;
+            label1.Location = new Point(379, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(260, 32);
+            label1.TabIndex = 12;
+            label1.Text = "Venta de Producto";
+            // 
+            // btnCerrar
+            // 
+            btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
+            btnCerrar.Location = new Point(757, 0);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(25, 27);
+            btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnCerrar.TabIndex = 13;
+            btnCerrar.TabStop = false;
+            btnCerrar.Click += btnCerrar_Click;
+            // 
+            // btnMinizar
+            // 
+            btnMinizar.Image = (Image)resources.GetObject("btnMinizar.Image");
+            btnMinizar.Location = new Point(723, 0);
+            btnMinizar.Name = "btnMinizar";
+            btnMinizar.Size = new Size(28, 27);
+            btnMinizar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnMinizar.TabIndex = 19;
+            btnMinizar.TabStop = false;
+            btnMinizar.Click += btnMinizar_Click;
+            // 
             // venderProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(15, 15, 15);
+            ClientSize = new Size(780, 330);
+            Controls.Add(btnMinizar);
+            Controls.Add(btnCerrar);
+            Controls.Add(label1);
+            Controls.Add(panel1);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(LbResult);
             Controls.Add(TbUsuario);
             Controls.Add(TbCantidad_P);
             Controls.Add(TbNombre_P);
             Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "venderProducto";
+            Opacity = 0.9D;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "venderProducto";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinizar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -101,5 +218,12 @@
         private TextBox TbCantidad_P;
         private TextBox TbUsuario;
         private Label LbResult;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private Panel panel1;
+        private Label label1;
+        private PictureBox btnCerrar;
+        private PictureBox btnMinizar;
     }
 }

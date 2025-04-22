@@ -20,14 +20,14 @@ namespace Principal.Usuario
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            UsuarioController controller = new UsuarioController(); 
+            UsuarioController controller = new UsuarioController();
 
             try
             {
                 string nombre = TbNombre.Text;
                 string email = TbEmail.Text;
                 string contraseña = TbPassword.Text;
-                string rol =  TbRol.Text; // ComboBox de roles
+                string rol = TbRol.Text; // ComboBox de roles
 
                 string resultado = controller.RegistrarUsuario(nombre, email, contraseña, rol);
 
@@ -41,6 +41,72 @@ namespace Principal.Usuario
             {
                 Console.WriteLine("Error al Editar el producto: " + ex.Message);
             }
+        }
+
+        private void TbNombre_Enter(object sender, EventArgs e)
+        {
+            if (TbNombre.Text == "Nombre")
+            {
+                TbNombre.Text = "";
+                TbNombre.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void TbNombre_Leave(object sender, EventArgs e)
+        {
+            if (TbNombre.Text == "")
+            {
+                TbNombre.Text = "Nombre";
+                TbNombre.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void TbEmail_Enter(object sender, EventArgs e)
+        {
+            if (TbEmail.Text == "Email")
+            {
+                TbEmail.Text = "";
+                TbEmail.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void TbEmail_Leave(object sender, EventArgs e)
+        {
+            if (TbEmail.Text == "")
+            {
+                TbEmail.Text = "Email";
+                TbEmail.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void TbPassword_Enter(object sender, EventArgs e)
+        {
+            if (TbPassword.Text == "Contraseña")
+            {
+                TbPassword.Text = "";
+                TbPassword.ForeColor = Color.DimGray;
+                TbPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void TbPassword_Leave(object sender, EventArgs e)
+        {
+            if (TbPassword.Text == "")
+            {
+                TbPassword.Text = "Contraseña";
+                TbPassword.ForeColor = Color.DimGray;
+                TbPassword.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
