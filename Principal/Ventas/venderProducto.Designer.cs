@@ -31,13 +31,12 @@
             button1 = new Button();
             TbNombre_P = new TextBox();
             TbCantidad_P = new TextBox();
-            TbUsuario = new TextBox();
             LbResult = new Label();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(56, 295);
+            button1.Location = new Point(56, 220);
             button1.Name = "button1";
             button1.Size = new Size(118, 40);
             button1.TabIndex = 0;
@@ -61,14 +60,6 @@
             TbCantidad_P.Size = new Size(131, 23);
             TbCantidad_P.TabIndex = 2;
             // 
-            // TbUsuario
-            // 
-            TbUsuario.Location = new Point(56, 206);
-            TbUsuario.Name = "TbUsuario";
-            TbUsuario.PlaceholderText = "usuario";
-            TbUsuario.Size = new Size(100, 23);
-            TbUsuario.TabIndex = 3;
-            // 
             // LbResult
             // 
             LbResult.AutoSize = true;
@@ -84,7 +75,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(LbResult);
-            Controls.Add(TbUsuario);
             Controls.Add(TbCantidad_P);
             Controls.Add(TbNombre_P);
             Controls.Add(button1);
@@ -99,7 +89,6 @@
         private Button button1;
         private TextBox TbNombre_P;
         private TextBox TbCantidad_P;
-        private TextBox TbUsuario;
         private Label LbResult;
     }
 }

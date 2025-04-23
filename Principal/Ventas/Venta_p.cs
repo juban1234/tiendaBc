@@ -56,5 +56,28 @@ namespace Principal.Ventas
             venderProducto vender = new venderProducto();
             vender.Show();
         }
+
+        private void Venta_p_Load(object sender, EventArgs e)
+        {
+            VendedorController us = new();
+            var productos = us.VerProductos();
+
+
+            PanelContainer.Controls.Clear();
+
+            int yOffset = 10;
+
+            foreach (var producto in productos)
+            {
+                Label lblProducto = new();
+                lblProducto.Text = $"{producto.Nombre}\n {producto.Descripcion}\n {producto.Cantidad}";
+                lblProducto.AutoSize = true;
+                lblProducto.Location = new Point(10, yOffset);
+
+                PanelContainer.Controls.Add(lblProducto);
+
+                yOffset += 50;
+            }
+        }
     }
 }

@@ -7,24 +7,24 @@ namespace Principal
 {
     public partial class Menu : Form
     {
-        private usuarioEntyti usuarioActual;
+        private usuarioEntyti usuarioA;
 
         public Menu(usuarioEntyti usuario)
         {
             InitializeComponent();
-            usuarioActual = usuario;
+            usuarioA = usuario;
             AplicarPermisosPorRol();
         }
 
         private void AplicarPermisosPorRol()
         {
             // Ocultar o mostrar botones según el rol
-            if (usuarioActual.Rol == "vendedor")
+            if (usuarioA.Rol == "vendedor")
             {
                 // Por ejemplo, ocultar botón de inventario
                 inventario.Enabled = false;
             }
-            else if (usuarioActual.Rol == "administrador")
+            else if (usuarioA.Rol == "administrador")
             {
                 // Mostrar todo si es administrador
                 ventas.Enabled = false;
@@ -50,6 +50,18 @@ namespace Principal
             this.Close();
             login login = new login();
             login.Show();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            if (SesionActual.EstaAutenticado())
+            {
+                LbBienvenido.Text = "Bienvenido " + SesionActual.ObtenerUsuario().Nombre; 
+            }
+            else
+            {
+                LbBienvenido.Text = "Bienvenido invitado";
+            }
         }
     }
 }

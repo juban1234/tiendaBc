@@ -1,14 +1,8 @@
 ﻿
+using System.Data;
 using Modelo.Entity;
 using Modelo.Entitys;
 using MySql.Data.MySqlClient;
-
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Modelo
 {
@@ -70,7 +64,7 @@ namespace Modelo
 
                     using (MySqlDataReader reader = conexion.ExecuteReader())
                     {
-                        if (reader.Read()) 
+                        if (reader.Read())
                         {
                             producto = new ProductoEntity
                             {

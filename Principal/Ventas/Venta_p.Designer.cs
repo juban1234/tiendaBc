@@ -105,6 +105,7 @@
             Controls.Add(TbBusqueda);
             Name = "Venta_p";
             Text = "Venta_p";
+            Load += Venta_p_Load;
             ResumeLayout(false);
             PerformLayout();
         }
