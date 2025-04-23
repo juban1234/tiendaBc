@@ -7,12 +7,12 @@ namespace Principal
 {
     public partial class EliminarP : Form
     {
-        
+
 
         public EliminarP()
         {
             InitializeComponent();
-            
+
         }
 
         private AdminController controller = new AdminController();
@@ -27,7 +27,7 @@ namespace Principal
                 return;
             }
 
-            
+
 
 
             string eliminado = controller.EliminarProducto(tbId.Text);
@@ -43,6 +43,21 @@ namespace Principal
             {
                 resultado.ForeColor = Color.Red;
             }
+        }
+
+        private void EliminarP_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMinizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

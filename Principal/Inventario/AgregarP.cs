@@ -23,7 +23,7 @@ namespace Principal
         private void btAgregar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(tbNombre.Text) || string.IsNullOrEmpty(tbDescripcion.Text) ||
-                string.IsNullOrEmpty(tbPrecio.Text) || string.IsNullOrEmpty(tbCantidad.Text) || 
+                string.IsNullOrEmpty(tbPrecio.Text) || string.IsNullOrEmpty(tbCantidad.Text) ||
                 string.IsNullOrEmpty(tbProovedor.Text))
             {
                 tbResultado.Text = "Por favor complete todos los campos.";
@@ -55,5 +55,14 @@ namespace Principal
             this.Close();
         }
 
+        private void btnMinizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
