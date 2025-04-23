@@ -1,20 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Modelo.Entitys;
-using Principal.Ventas;
 
 namespace Principal.Ventas
 {
     public partial class venderProducto : Form
     {
-        private VendedorController controller = new VendedorController();
+
 
         public venderProducto()
         {
@@ -23,6 +13,8 @@ namespace Principal.Ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            VendedorController controller = new VendedorController();
+
             try
             {
                 int usuario = SesionActual.ObtenerUsuario().Id_usuario;
@@ -42,14 +34,26 @@ namespace Principal.Ventas
             }
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
         {
-            this.Close(); // Cerramos solo la ventana actual, no toda la aplicación
+            this.Close();
         }
 
         private void btnMinizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        //private void btnCerrar_Click(object sender, EventArgs e)
+        //{
+        //}
+
+        //private void btnMinizar_Click(object sender, EventArgs e)
+        //{
+        //    this.WindowState = FormWindowState.Minimized;
+        //}
+
+
     }
 }

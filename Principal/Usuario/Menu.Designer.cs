@@ -36,12 +36,13 @@
             lbUsuario = new Label();
             btLogin = new Button();
             panel1 = new Panel();
-            label2 = new Label();
-            btnMinizar = new PictureBox();
             btnCerrar = new PictureBox();
+            btnMinizar = new PictureBox();
+            label2 = new Label();
+            LbBienvenido = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnMinizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinizar).BeginInit();
             SuspendLayout();
             // 
             // inventario
@@ -120,16 +121,16 @@
             panel1.Size = new Size(251, 321);
             panel1.TabIndex = 12;
             // 
-            // label2
+            // btnCerrar
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.DimGray;
-            label2.Location = new Point(187, 21);
-            label2.Name = "label2";
-            label2.Size = new Size(133, 32);
-            label2.TabIndex = 13;
-            label2.Text = "TiendaBc";
+            btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
+            btnCerrar.Location = new Point(226, 0);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(25, 27);
+            btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnCerrar.TabIndex = 21;
+            btnCerrar.TabStop = false;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // btnMinizar
             // 
@@ -142,16 +143,25 @@
             btnMinizar.TabStop = false;
             btnMinizar.Click += btnMinizar_Click;
             // 
-            // btnCerrar
+            // label2
             // 
-            btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(226, 0);
-            btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(25, 27);
-            btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
-            btnCerrar.TabIndex = 21;
-            btnCerrar.TabStop = false;
-            btnCerrar.Click += btnCerrar_Click;
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.DimGray;
+            label2.Location = new Point(187, 21);
+            label2.Name = "label2";
+            label2.Size = new Size(137, 31);
+            label2.TabIndex = 13;
+            label2.Text = "TiendaBc";
+            // 
+            // LbBienvenido
+            // 
+            LbBienvenido.AutoSize = true;
+            LbBienvenido.ForeColor = SystemColors.Control;
+            LbBienvenido.Location = new Point(40, 87);
+            LbBienvenido.Name = "LbBienvenido";
+            LbBienvenido.Size = new Size(0, 15);
+            LbBienvenido.TabIndex = 14;
             // 
             // Menu
             // 
@@ -160,6 +170,7 @@
             BackColor = Color.FromArgb(15, 15, 15);
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(750, 321);
+            Controls.Add(LbBienvenido);
             Controls.Add(btLogin);
             Controls.Add(ventas);
             Controls.Add(inventario);
@@ -173,8 +184,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)btnMinizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinizar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -276,6 +287,7 @@
         private Label label2;
         private PictureBox btnMinizar;
         private PictureBox btnCerrar;
+        private Label LbBienvenido;
 =======
         private Button btLogin;
         private Label LbBienvenido;
