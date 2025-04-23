@@ -40,8 +40,8 @@ namespace Principal.Ventas
                     LbResult.Text = "producto vendido";
                 }
 
+                     
                 
-                //this.Close();
             }
             catch (FormatException)
             {

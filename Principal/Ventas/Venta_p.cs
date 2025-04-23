@@ -28,27 +28,7 @@ namespace Principal.Ventas
 
         private void BtTraerProducto_Click(object sender, EventArgs e)
         {
-
-            VendedorController us = new();
-            var productos = us.VerProductos();
-
-
-            PanelContainer.Controls.Clear();
-
-            int yOffset = 10;
-
-            foreach (var producto in productos)
-            {
-                Label lblProducto = new();
-                lblProducto.Text = $"{producto.Nombre}\n {producto.Descripcion}\n {producto.Cantidad}";
-                lblProducto.AutoSize = true;
-                lblProducto.Location = new Point(10, yOffset);
-
-                PanelContainer.Controls.Add(lblProducto);
-
-                yOffset += 50;
-            }
-
+            obtenerInventario();
         }
 
         private void BtVende_P_Click(object sender, EventArgs e)
@@ -59,6 +39,11 @@ namespace Principal.Ventas
 
         private void Venta_p_Load(object sender, EventArgs e)
         {
+            obtenerInventario();
+        }
+    
+        private void obtenerInventario()
+        {
             VendedorController us = new();
             var productos = us.VerProductos();
 
@@ -70,7 +55,7 @@ namespace Principal.Ventas
             foreach (var producto in productos)
             {
                 Label lblProducto = new();
-                lblProducto.Text = $"{producto.Nombre}\n {producto.Descripcion}\n {producto.Cantidad}";
+                lblProducto.Text = $"{producto.Nombre}\n {producto.Cantidad}";
                 lblProducto.AutoSize = true;
                 lblProducto.Location = new Point(10, yOffset);
 
