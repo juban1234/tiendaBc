@@ -65,10 +65,9 @@
             btAgregar.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
             btAgregar.FlatStyle = FlatStyle.Flat;
             btAgregar.ForeColor = Color.LightGray;
-            btAgregar.Location = new Point(383, 589);
-            btAgregar.Margin = new Padding(3, 4, 3, 4);
+            btAgregar.Location = new Point(335, 442);
             btAgregar.Name = "btAgregar";
-            btAgregar.Size = new Size(473, 44);
+            btAgregar.Size = new Size(414, 33);
             btAgregar.TabIndex = 6;
             btAgregar.Text = "Agregar";
             btAgregar.UseVisualStyleBackColor = false;
@@ -77,91 +76,91 @@
             // tbResultado
             // 
             tbResultado.AutoSize = true;
-            tbResultado.Location = new Point(576, 240);
+            tbResultado.Location = new Point(504, 180);
             tbResultado.Name = "tbResultado";
-            tbResultado.Size = new Size(0, 20);
+            tbResultado.Size = new Size(0, 15);
             tbResultado.TabIndex = 7;
             // 
             // tbNombre
             // 
             tbNombre.BackColor = Color.FromArgb(15, 15, 15);
             tbNombre.BorderStyle = BorderStyle.None;
-            tbNombre.Font = new Font("Century Gothic", 12F);
-            tbNombre.Location = new Point(381, 149);
-            tbNombre.Margin = new Padding(3, 4, 3, 4);
+            tbNombre.Font = new Font("Microsoft Sans Serif", 12F);
+            tbNombre.ForeColor = SystemColors.Menu;
+            tbNombre.Location = new Point(333, 112);
             tbNombre.Name = "tbNombre";
             tbNombre.PlaceholderText = "Nombre";
-            tbNombre.Size = new Size(475, 25);
+            tbNombre.Size = new Size(416, 19);
             tbNombre.TabIndex = 42;
             // 
             // tbCantidad
             // 
             tbCantidad.BackColor = Color.FromArgb(15, 15, 15);
             tbCantidad.BorderStyle = BorderStyle.None;
-            tbCantidad.Font = new Font("Century Gothic", 12F);
-            tbCantidad.Location = new Point(381, 345);
-            tbCantidad.Margin = new Padding(3, 4, 3, 4);
+            tbCantidad.Font = new Font("Microsoft Sans Serif", 12F);
+            tbCantidad.ForeColor = SystemColors.Menu;
+            tbCantidad.Location = new Point(333, 259);
             tbCantidad.Name = "tbCantidad";
             tbCantidad.PlaceholderText = "Cantidad";
-            tbCantidad.Size = new Size(475, 25);
+            tbCantidad.Size = new Size(416, 19);
             tbCantidad.TabIndex = 41;
             // 
             // tbPrecio
             // 
             tbPrecio.BackColor = Color.FromArgb(15, 15, 15);
             tbPrecio.BorderStyle = BorderStyle.None;
-            tbPrecio.Font = new Font("Century Gothic", 12F);
-            tbPrecio.Location = new Point(381, 275);
-            tbPrecio.Margin = new Padding(3, 4, 3, 4);
+            tbPrecio.Font = new Font("Microsoft Sans Serif", 12F);
+            tbPrecio.ForeColor = SystemColors.Menu;
+            tbPrecio.Location = new Point(333, 206);
             tbPrecio.Name = "tbPrecio";
             tbPrecio.PlaceholderText = "Precio";
-            tbPrecio.Size = new Size(475, 25);
+            tbPrecio.Size = new Size(416, 19);
             tbPrecio.TabIndex = 40;
             // 
             // tbDescripcion
             // 
             tbDescripcion.BackColor = Color.FromArgb(15, 15, 15);
             tbDescripcion.BorderStyle = BorderStyle.None;
-            tbDescripcion.Font = new Font("Century Gothic", 12F);
-            tbDescripcion.Location = new Point(381, 219);
-            tbDescripcion.Margin = new Padding(3, 4, 3, 4);
+            tbDescripcion.Font = new Font("Microsoft Sans Serif", 12F);
+            tbDescripcion.ForeColor = SystemColors.Menu;
+            tbDescripcion.Location = new Point(333, 164);
             tbDescripcion.Name = "tbDescripcion";
             tbDescripcion.PlaceholderText = "Descripcion";
-            tbDescripcion.Size = new Size(475, 25);
+            tbDescripcion.Size = new Size(416, 19);
             tbDescripcion.TabIndex = 39;
             // 
             // tbImagen
             // 
             tbImagen.BackColor = Color.FromArgb(15, 15, 15);
             tbImagen.BorderStyle = BorderStyle.None;
-            tbImagen.Font = new Font("Century Gothic", 12F);
-            tbImagen.Location = new Point(381, 419);
-            tbImagen.Margin = new Padding(3, 4, 3, 4);
+            tbImagen.Font = new Font("Microsoft Sans Serif", 12F);
+            tbImagen.ForeColor = SystemColors.Menu;
+            tbImagen.Location = new Point(333, 314);
             tbImagen.Name = "tbImagen";
             tbImagen.PlaceholderText = "Imagen";
-            tbImagen.Size = new Size(477, 25);
+            tbImagen.Size = new Size(417, 19);
             tbImagen.TabIndex = 4;
             // 
             // tbProovedor
             // 
             tbProovedor.BackColor = Color.FromArgb(15, 15, 15);
             tbProovedor.BorderStyle = BorderStyle.None;
-            tbProovedor.Font = new Font("Century Gothic", 12F);
-            tbProovedor.Location = new Point(381, 488);
-            tbProovedor.Margin = new Padding(3, 4, 3, 4);
+            tbProovedor.Font = new Font("Microsoft Sans Serif", 12F);
+            tbProovedor.ForeColor = SystemColors.Menu;
+            tbProovedor.Location = new Point(333, 366);
             tbProovedor.Name = "tbProovedor";
             tbProovedor.PlaceholderText = "Proveedor";
-            tbProovedor.Size = new Size(477, 25);
+            tbProovedor.Size = new Size(417, 19);
             tbProovedor.TabIndex = 43;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.DimGray;
-            label2.Location = new Point(454, 51);
+            label2.Location = new Point(397, 38);
             label2.Name = "label2";
-            label2.Size = new Size(310, 40);
+            label2.Size = new Size(242, 31);
             label2.TabIndex = 44;
             label2.Text = "Agregar Producto";
             // 
@@ -170,18 +169,16 @@
             panel1.BackColor = Color.FromArgb(0, 122, 204);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(286, 700);
+            panel1.Size = new Size(250, 525);
             panel1.TabIndex = 45;
             // 
             // btnMinizar
             // 
             btnMinizar.Image = (Image)resources.GetObject("btnMinizar.Image");
-            btnMinizar.Location = new Point(847, 0);
-            btnMinizar.Margin = new Padding(3, 4, 3, 4);
+            btnMinizar.Location = new Point(741, 0);
             btnMinizar.Name = "btnMinizar";
-            btnMinizar.Size = new Size(32, 36);
+            btnMinizar.Size = new Size(28, 27);
             btnMinizar.SizeMode = PictureBoxSizeMode.Zoom;
             btnMinizar.TabIndex = 46;
             btnMinizar.TabStop = false;
@@ -190,10 +187,9 @@
             // btnCerrar
             // 
             btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(885, 0);
-            btnCerrar.Margin = new Padding(3, 4, 3, 4);
+            btnCerrar.Location = new Point(774, 0);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(29, 36);
+            btnCerrar.Size = new Size(25, 27);
             btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
             btnCerrar.TabIndex = 47;
             btnCerrar.TabStop = false;
@@ -203,10 +199,9 @@
             // 
             pictureBox1.BackColor = Color.DimGray;
             pictureBox1.Enabled = false;
-            pictureBox1.Location = new Point(381, 182);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(333, 136);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(475, 1);
+            pictureBox1.Size = new Size(416, 1);
             pictureBox1.TabIndex = 48;
             pictureBox1.TabStop = false;
             // 
@@ -214,10 +209,9 @@
             // 
             pictureBox2.BackColor = Color.DimGray;
             pictureBox2.Enabled = false;
-            pictureBox2.Location = new Point(381, 318);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(333, 238);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(475, 1);
+            pictureBox2.Size = new Size(416, 1);
             pictureBox2.TabIndex = 49;
             pictureBox2.TabStop = false;
             // 
@@ -225,10 +219,9 @@
             // 
             pictureBox3.BackColor = Color.DimGray;
             pictureBox3.Enabled = false;
-            pictureBox3.Location = new Point(383, 521);
-            pictureBox3.Margin = new Padding(3, 4, 3, 4);
+            pictureBox3.Location = new Point(335, 391);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(475, 1);
+            pictureBox3.Size = new Size(416, 1);
             pictureBox3.TabIndex = 50;
             pictureBox3.TabStop = false;
             // 
@@ -236,10 +229,9 @@
             // 
             pictureBox4.BackColor = Color.DimGray;
             pictureBox4.Enabled = false;
-            pictureBox4.Location = new Point(383, 452);
-            pictureBox4.Margin = new Padding(3, 4, 3, 4);
+            pictureBox4.Location = new Point(335, 339);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(475, 1);
+            pictureBox4.Size = new Size(416, 1);
             pictureBox4.TabIndex = 51;
             pictureBox4.TabStop = false;
             // 
@@ -247,10 +239,9 @@
             // 
             pictureBox5.BackColor = Color.DimGray;
             pictureBox5.Enabled = false;
-            pictureBox5.Location = new Point(381, 378);
-            pictureBox5.Margin = new Padding(3, 4, 3, 4);
+            pictureBox5.Location = new Point(333, 284);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(475, 1);
+            pictureBox5.Size = new Size(416, 1);
             pictureBox5.TabIndex = 52;
             pictureBox5.TabStop = false;
             // 
@@ -258,19 +249,18 @@
             // 
             pictureBox6.BackColor = Color.DimGray;
             pictureBox6.Enabled = false;
-            pictureBox6.Location = new Point(381, 252);
-            pictureBox6.Margin = new Padding(3, 4, 3, 4);
+            pictureBox6.Location = new Point(333, 189);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(475, 1);
+            pictureBox6.Size = new Size(416, 1);
             pictureBox6.TabIndex = 53;
             pictureBox6.TabStop = false;
             // 
             // AgregarP
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
-            ClientSize = new Size(910, 700);
+            ClientSize = new Size(796, 525);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
@@ -290,7 +280,6 @@
             Controls.Add(btAgregar);
             Controls.Add(tbImagen);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "AgregarP";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AgregarP";

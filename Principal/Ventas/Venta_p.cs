@@ -18,7 +18,7 @@ namespace Principal.Ventas
 
             if (producto != null)
             {
-                lbResult.Text = $"producto Nombre: {producto.Nombre}, Precio: {producto.Precio}, cantidad: {producto.Cantidad}";
+                lbResult.Text = $"producto: {producto.Nombre}, Precio: {producto.Precio}, cantidad: {producto.Cantidad}";
             }
             else
             {

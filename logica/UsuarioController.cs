@@ -46,7 +46,7 @@ namespace logica
 
                 if (contraseñaValida)
                 {
-                    SesionActual.IniciarSesion(usuario); // ← Guardamos la sesión correctamente
+                    SesionActual.IniciarSesion(usuario); 
                     return usuario;
                 }
                 else

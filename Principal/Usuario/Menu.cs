@@ -28,32 +28,23 @@ namespace Principal
             }
         }
 
-        private void Menu_Load(object sender, EventArgs e)
-        {
-            if (SesionActual.EstaAutenticado())
-            {
-                LbBienvenido.Text = "Bienvenido " + SesionActual.ObtenerUsuario().Nombre;
-            }
-            else
-            {
-                LbBienvenido.Text = "Bienvenido invitado";
-            }
-        }
-
         private void inventario_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
             InventarioP inventario = new InventarioP();
             inventario.Show();
         }
 
         private void ventas_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
             Venta_p ventas = new Venta_p();
             ventas.Show();
         }
 
         private void btLogin_Click(object sender, EventArgs e)
         {
+            SesionActual.CerrarSesion();
             this.Close();
             login login = new login();
             login.Show();
@@ -67,6 +58,18 @@ namespace Principal
         private void btnMinizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Menu_Load_1(object sender, EventArgs e)
+        {
+            if (SesionActual.EstaAutenticado())
+            {
+                LbBienvenido.Text = "Bienvenido " + SesionActual.ObtenerUsuario().Nombre;
+            }
+            else
+            {
+                LbBienvenido.Text = "Bienvenido invitado";
+            }
         }
     }
 }

@@ -173,6 +173,7 @@
             Opacity = 0.9D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Menu_Load_1;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMinizar).EndInit();
