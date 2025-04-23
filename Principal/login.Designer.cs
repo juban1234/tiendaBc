@@ -54,11 +54,12 @@
             btnIniciarSesion.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
             btnIniciarSesion.FlatStyle = FlatStyle.Flat;
             btnIniciarSesion.ForeColor = Color.LightGray;
-            btnIniciarSesion.Location = new Point(333, 211);
+            btnIniciarSesion.Location = new Point(381, 281);
+            btnIniciarSesion.Margin = new Padding(3, 4, 3, 4);
             btnIniciarSesion.Name = "btnIniciarSesion";
-            btnIniciarSesion.Size = new Size(400, 40);
+            btnIniciarSesion.Size = new Size(457, 53);
             btnIniciarSesion.TabIndex = 0;
-            btnIniciarSesion.Text = "Iniciar Sesion";
+            btnIniciarSesion.Text = "INICIAR SESION";
             btnIniciarSesion.UseVisualStyleBackColor = false;
             btnIniciarSesion.Click += btnIniciarSesion_Click;
             // 
@@ -68,10 +69,11 @@
             tbUsuario.BorderStyle = BorderStyle.None;
             tbUsuario.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbUsuario.ForeColor = Color.White;
-            tbUsuario.Location = new Point(333, 84);
+            tbUsuario.Location = new Point(381, 112);
+            tbUsuario.Margin = new Padding(3, 4, 3, 4);
             tbUsuario.Name = "tbUsuario";
             tbUsuario.PlaceholderText = "Usuario";
-            tbUsuario.Size = new Size(416, 20);
+            tbUsuario.Size = new Size(475, 25);
             tbUsuario.TabIndex = 1;
             tbUsuario.Enter += tbUsuario_Enter;
             tbUsuario.Leave += tbUsuario_Leave;
@@ -82,10 +84,11 @@
             tbContraseña.BorderStyle = BorderStyle.None;
             tbContraseña.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbContraseña.ForeColor = Color.White;
-            tbContraseña.Location = new Point(333, 148);
+            tbContraseña.Location = new Point(381, 197);
+            tbContraseña.Margin = new Padding(3, 4, 3, 4);
             tbContraseña.Name = "tbContraseña";
             tbContraseña.PlaceholderText = "Contraseña";
-            tbContraseña.Size = new Size(416, 20);
+            tbContraseña.Size = new Size(475, 25);
             tbContraseña.TabIndex = 2;
             tbContraseña.Enter += tbContraseña_Enter;
             tbContraseña.Leave += tbContraseña_Leave;
@@ -98,11 +101,12 @@
             btRegistro.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
             btRegistro.FlatStyle = FlatStyle.Flat;
             btRegistro.ForeColor = Color.LightGray;
-            btRegistro.Location = new Point(333, 267);
+            btRegistro.Location = new Point(381, 356);
+            btRegistro.Margin = new Padding(3, 4, 3, 4);
             btRegistro.Name = "btRegistro";
-            btRegistro.Size = new Size(400, 40);
+            btRegistro.Size = new Size(457, 53);
             btRegistro.TabIndex = 3;
-            btRegistro.Text = "Registro";
+            btRegistro.Text = "REGISTRARSE";
             btRegistro.UseVisualStyleBackColor = false;
             btRegistro.Click += btRegistro_Click;
             // 
@@ -111,9 +115,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DimGray;
-            label1.Location = new Point(478, 31);
+            label1.Location = new Point(546, 41);
             label1.Name = "label1";
-            label1.Size = new Size(133, 32);
+            label1.Size = new Size(167, 40);
             label1.TabIndex = 4;
             label1.Text = "TiendaBc";
             // 
@@ -122,25 +126,27 @@
             panel1.BackColor = Color.FromArgb(0, 122, 204);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 330);
+            panel1.Size = new Size(286, 440);
             panel1.TabIndex = 5;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(272, 75);
+            linkLabel1.Location = new Point(311, 100);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(0, 15);
+            linkLabel1.Size = new Size(0, 20);
             linkLabel1.TabIndex = 6;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.DimGray;
             pictureBox1.Enabled = false;
-            pictureBox1.Location = new Point(333, 110);
+            pictureBox1.Location = new Point(381, 147);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(416, 1);
+            pictureBox1.Size = new Size(475, 1);
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
@@ -148,18 +154,20 @@
             // 
             pictureBox2.BackColor = Color.DimGray;
             pictureBox2.Enabled = false;
-            pictureBox2.Location = new Point(333, 174);
+            pictureBox2.Location = new Point(381, 232);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(416, 1);
+            pictureBox2.Size = new Size(475, 1);
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
             // btnCerrar
             // 
             btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(755, 0);
+            btnCerrar.Location = new Point(863, 0);
+            btnCerrar.Margin = new Padding(3, 4, 3, 4);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(25, 27);
+            btnCerrar.Size = new Size(29, 36);
             btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
             btnCerrar.TabIndex = 10;
             btnCerrar.TabStop = false;
@@ -168,9 +176,10 @@
             // btnMinizar
             // 
             btnMinizar.Image = (Image)resources.GetObject("btnMinizar.Image");
-            btnMinizar.Location = new Point(721, 0);
+            btnMinizar.Location = new Point(824, 0);
+            btnMinizar.Margin = new Padding(3, 4, 3, 4);
             btnMinizar.Name = "btnMinizar";
-            btnMinizar.Size = new Size(28, 27);
+            btnMinizar.Size = new Size(32, 36);
             btnMinizar.SizeMode = PictureBoxSizeMode.Zoom;
             btnMinizar.TabIndex = 11;
             btnMinizar.TabStop = false;
@@ -178,10 +187,10 @@
             // 
             // login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
-            ClientSize = new Size(780, 330);
+            ClientSize = new Size(891, 440);
             Controls.Add(btnMinizar);
             Controls.Add(btnCerrar);
             Controls.Add(pictureBox2);
@@ -194,6 +203,7 @@
             Controls.Add(tbUsuario);
             Controls.Add(btnIniciarSesion);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "login";
             Opacity = 0.9D;
             StartPosition = FormStartPosition.CenterScreen;

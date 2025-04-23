@@ -51,7 +51,7 @@
             btElimninar.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
             btElimninar.FlatStyle = FlatStyle.Flat;
             btElimninar.ForeColor = Color.LightGray;
-            btElimninar.Location = new Point(152, 279);
+            btElimninar.Location = new Point(133, 279);
             btElimninar.Margin = new Padding(3, 4, 3, 4);
             btElimninar.Name = "btElimninar";
             btElimninar.Size = new Size(417, 45);
@@ -74,7 +74,7 @@
             tbId.BorderStyle = BorderStyle.None;
             tbId.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbId.ForeColor = Color.DimGray;
-            tbId.Location = new Point(143, 175);
+            tbId.Location = new Point(124, 175);
             tbId.Margin = new Padding(3, 4, 3, 4);
             tbId.Name = "tbId";
             tbId.PlaceholderText = "Nombre del Producto";
@@ -113,14 +113,14 @@
             panel1.Dock = DockStyle.Right;
             panel1.Location = new Point(664, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 500);
+            panel1.Size = new Size(250, 450);
             panel1.TabIndex = 22;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.DimGray;
             pictureBox1.Enabled = false;
-            pictureBox1.Location = new Point(143, 216);
+            pictureBox1.Location = new Point(124, 216);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(423, 2);
@@ -132,7 +132,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DimGray;
-            label1.Location = new Point(152, 31);
+            label1.Location = new Point(124, 43);
             label1.Name = "label1";
             label1.Size = new Size(417, 40);
             label1.TabIndex = 24;
@@ -143,7 +143,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
-            ClientSize = new Size(914, 500);
+            ClientSize = new Size(914, 450);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
