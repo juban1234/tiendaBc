@@ -1,16 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Modelo.Entitys
+﻿namespace Modelo.Entitys
 {
-    public partial class secionActual
+    public static class SesionActual
     {
-        public static string Nombre { get; set; }
-        public static string Email { get; set; }
-        public static string Rol { get; set; }
-        public static int Id { get; set; }
+        private static usuarioEntyti _usuario;
+
+        public static void IniciarSesion(usuarioEntyti usuario)
+        {
+            _usuario = usuario;
+        }
+
+        public static void CerrarSesion()
+        {
+            _usuario = null;
+        }
+
+        public static usuarioEntyti ObtenerUsuario()
+        {
+            return _usuario;
+        }
+
+        public static bool EstaAutenticado()
+        {
+            return _usuario != null;
+        }
     }
 }

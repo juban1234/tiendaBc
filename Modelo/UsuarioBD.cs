@@ -35,6 +35,7 @@ namespace Modelo
                         {
                             usuario = new usuarioEntyti
                             {
+                                Id_usuario = reader.GetInt16("id"),
                                 Nombre = reader.GetString("nombre"),
                                 Rol = reader.GetString("rol"),
                                 Contraseña = reader.GetString("contraseña")

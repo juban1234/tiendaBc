@@ -36,6 +36,7 @@ namespace logica
         public usuarioEntyti Login(string correo, string contraseña)
         {
             usuarioEntyti usuario = db.BuscarUsuarioPorEmail(correo);
+            //secionActual.secion = usuario;
 
             if (usuario != null)
             {
@@ -45,6 +46,7 @@ namespace logica
 
                 if (contraseñaValida)
                 {
+                    SesionActual.IniciarSesion(usuario); // ← Guardamos la sesión correctamente
                     return usuario;
                 }
                 else
@@ -56,6 +58,7 @@ namespace logica
             {
                 Console.WriteLine("No se encontró el usuario.");
             }
+
 
             return null;
         }

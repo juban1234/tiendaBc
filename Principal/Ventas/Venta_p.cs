@@ -1,75 +1,63 @@
-﻿using Modelo;
-using Modelo.Entity;
+
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Modelo.Entitys;
+using Principal.Ventas;
 
 namespace Principal.Ventas
 {
-    public partial class Venta_p : Form
+    public partial class venderProducto : Form
     {
-        public Venta_p()
+        
+        public venderProducto()
         {
             InitializeComponent();
+            
         }
 
-        private void BtBusqueda_Click(object sender, EventArgs e)
-        {
-            vendedorBD db = new vendedorBD();
-            VendedorController controller = new VendedorController();
-            ProductoEntity producto = db.BuscarProducto(TbBusqueda.Text);
+        private VendedorController controller = new VendedorController();
 
-            if (producto != null)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int usuario = SesionActual.ObtenerUsuario().Id_usuario;
+
+            try
             {
-                lbResult.Text = $"producto Nombre: {producto.Nombre}, Precio: {producto.Precio}, cantidad: {producto.Cantidad}";
+                controller.VentaProducto(
+                TbNombre_P.Text,
+                TbCantidad_P.Text,
+                usuario
+                );
+
+                if (controller != null)
+                {
+                    LbResult.Text = "producto vendido";
+                }
+
+                     
+                
             }
-            else
+            catch (FormatException)
             {
-                lbResult.Text = "No se encontró el producto.";
+                LbResult.Text = "error al buscar este producto";
             }
-        }
-
-        private void BtTraerProducto_Click(object sender, EventArgs e)
-        {
-
-            VendedorController us = new();
-            var productos = us.VerProductos();
-
-
-            PanelContainer.Controls.Clear();
-
-            int yOffset = 10;
-
-            foreach (var producto in productos)
-            {
-                Label lblProducto = new();
-                lblProducto.Text = $"{producto.Nombre}\n {producto.Descripcion}\n {producto.Cantidad}";
-                lblProducto.AutoSize = true;
-                lblProducto.Location = new Point(10, yOffset);
-
-                PanelContainer.Controls.Add(lblProducto);
-
-                yOffset += 50;
-            }
-
-        }
-
-        private void BtVende_P_Click(object sender, EventArgs e)
-        {
-            venderProducto vender = new venderProducto();
-            vender.Show();
-        }
-
-        private void Venta_p_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnMinizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnMinizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,29 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Modelo.Entitys;
 using Principal.Ventas;
 
 namespace Principal.Ventas
 {
     public partial class venderProducto : Form
     {
+        private VendedorController controller = new VendedorController();
+
         public venderProducto()
         {
             InitializeComponent();
         }
 
-        private VendedorController controller = new VendedorController();
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
+                int usuario = SesionActual.ObtenerUsuario().Id_usuario;
+
                 controller.VentaProducto(
-                TbNombre_P.Text,
-                TbCantidad_P.Text,
-                TbUsuario.Text
+                    TbNombre_P.Text,
+                    TbCantidad_P.Text,
+                    usuario
                 );
 
+                LbResult.Text = "producto vendido";
                 this.Close();
             }
             catch (FormatException)
@@ -40,7 +44,7 @@ namespace Principal.Ventas
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close(); // Cerramos solo la ventana actual, no toda la aplicación
         }
 
         private void btnMinizar_Click(object sender, EventArgs e)
