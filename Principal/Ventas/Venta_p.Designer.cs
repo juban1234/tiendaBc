@@ -1,8 +1,4 @@
-﻿using Org.BouncyCastle.Asn1.Crmf;
-using static System.Net.Mime.MediaTypeNames;
-using System.Xml.Linq;
-
-namespace Principal.Ventas
+﻿namespace Principal.Ventas
 {
     partial class Venta_p
     {
@@ -27,7 +23,8 @@ namespace Principal.Ventas
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -74,7 +71,7 @@ namespace Principal.Ventas
             // 
             PanelContainer.AutoScroll = true;
             PanelContainer.BackColor = Color.LightGray;
-            PanelContainer.ForeColor = Color.White;
+            PanelContainer.ForeColor = Color.Black;
             PanelContainer.Location = new Point(59, 126);
             PanelContainer.Name = "PanelContainer";
             PanelContainer.Size = new Size(499, 279);
@@ -116,12 +113,12 @@ namespace Principal.Ventas
             // 
             TbBusqueda.BackColor = Color.FromArgb(15, 15, 15);
             TbBusqueda.BorderStyle = BorderStyle.None;
-            TbBusqueda.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TbBusqueda.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TbBusqueda.ForeColor = Color.DimGray;
             TbBusqueda.Location = new Point(59, 39);
             TbBusqueda.Name = "TbBusqueda";
             TbBusqueda.PlaceholderText = "Busqueda de Productos";
-            TbBusqueda.Size = new Size(383, 20);
+            TbBusqueda.Size = new Size(383, 19);
             TbBusqueda.TabIndex = 12;
             // 
             // btnMinizar

@@ -152,7 +152,7 @@
             btnMinizar.SizeMode = PictureBoxSizeMode.Zoom;
             btnMinizar.TabIndex = 0;
             btnMinizar.TabStop = false;
-
+            btnMinizar.Click += this.btnMinizar_Click;
             // 
             // venderProducto
             // 

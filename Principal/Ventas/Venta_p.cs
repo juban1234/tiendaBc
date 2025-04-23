@@ -1,52 +1,79 @@
-using Modelo.Entitys;
+﻿using Modelo;
+using Modelo.Entity;
 
 namespace Principal.Ventas
 {
-    public partial class venderProducto : Form
+    public partial class Venta_p : Form
     {
-
-        public venderProducto()
+        public Venta_p()
         {
             InitializeComponent();
-
         }
 
-        private VendedorController controller = new VendedorController();
-
-        private void button1_Click(object sender, EventArgs e)
+        private void BtBusqueda_Click(object sender, EventArgs e)
         {
-            int usuario = SesionActual.ObtenerUsuario().Id_usuario;
+            vendedorBD db = new vendedorBD();
+            VendedorController controller = new VendedorController();
+            ProductoEntity producto = db.BuscarProducto(TbBusqueda.Text);
 
-            try
+            if (producto != null)
             {
-                controller.VentaProducto(
-                TbNombre_P.Text,
-                TbCantidad_P.Text,
-                usuario
-                );
-
-                if (controller != null)
-                {
-                    LbResult.Text = "producto vendido";
-                }
-
-
-
+                lbResult.Text = $"producto Nombre: {producto.Nombre}, Precio: {producto.Precio}, cantidad: {producto.Cantidad}";
             }
-            catch (FormatException)
+            else
             {
-                LbResult.Text = "error al buscar este producto";
+                lbResult.Text = "No se encontró el producto.";
             }
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void BtTraerProducto_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Obtener_P();
+
+        }
+
+        private void BtVende_P_Click(object sender, EventArgs e)
+        {
+            venderProducto vender = new venderProducto();
+            vender.Show();
+        }
+
+        private void Venta_p_Load(object sender, EventArgs e)
+        {
+            Obtener_P();
+        }
+
+        private void Obtener_P()
+        {
+            VendedorController us = new();
+            var productos = us.VerProductos();
+
+
+            PanelContainer.Controls.Clear();
+
+            int yOffset = 10;
+
+            foreach (var producto in productos)
+            {
+                Label lblProducto = new();
+                lblProducto.Text = $"{producto.Nombre}\n {producto.Cantidad}";
+                lblProducto.AutoSize = true;
+                lblProducto.Location = new Point(10, yOffset);
+
+                PanelContainer.Controls.Add(lblProducto);
+
+                yOffset += 50;
+            }
         }
 
         private void btnMinizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

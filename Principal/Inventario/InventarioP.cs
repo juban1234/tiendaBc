@@ -61,7 +61,7 @@ namespace Principal
             foreach (var producto in productos)
             {
                 Label lblProducto = new();
-                lblProducto.Text = $"{producto.Nombre}\n {producto.Descripcion}\n {producto.Cantidad}";
+                lblProducto.Text = $"{producto.Nombre}\n  {producto.Cantidad}";
                 lblProducto.AutoSize = true;
                 lblProducto.Location = new Point(10, yOffset);
 
@@ -78,7 +78,7 @@ namespace Principal
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnMinizar_Click(object sender, EventArgs e)
